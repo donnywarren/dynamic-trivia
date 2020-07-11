@@ -8,9 +8,52 @@ Timed trivia game in which the player attempts to answer as many questions as po
 
 ## API and Data Sample
 
-Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
-
 [Open Trivia DB](https://opentdb.com/)
+
+Sample response for mythology, hard and multiple choice:
+
+```
+
+"response_code": 0,
+"results": [
+{
+"category": "Mythology",
+"type": "multiple",
+"difficulty": "hard",
+"question": "Talos, the mythical giant bronze man, was the protector of which island?",
+"correct_answer": "Crete",
+"incorrect_answers": [
+"Sardinia",
+"Sicily",
+"Cyprus"
+]
+},
+{
+"category": "Mythology",
+"type": "multiple",
+"difficulty": "hard",
+"question": "What was the punishment for Sysiphus&#039;s craftiness?",
+"correct_answer": "Cursed to roll a boulder up a hill for eternity.",
+"incorrect_answers": [
+"Tied to a boulder for eternity, being pecked by birds.",
+"Standing in a lake filled with water he could not drink.",
+"To fell a tree that regenerated after every axe swing."
+]
+},
+{
+"category": "Mythology",
+"type": "multiple",
+"difficulty": "hard",
+"question": "According to Algonquian folklore, how does one transform into a Wendigo?",
+"correct_answer": "Participating in cannibalism.",
+"incorrect_answers": [
+"Excessive mutilation of animal corpses.",
+"Performing a ritual involving murder.",
+"Drinking the blood of many slain animals."
+]
+},
+
+```
 
 ## Wireframes
 
