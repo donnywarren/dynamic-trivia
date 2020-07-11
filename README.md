@@ -56,8 +56,8 @@ Wireframes built and hosted at wireframes.cc:
 
 #### MVP 
 ```
-I.   Locate and test external api for stability, content quality and reliability 
-II.  Produce basic page layouts for each of the necessary app screens
+  I. Locate and test external api for stability, content quality and reliability 
+ II. Produce basic page layouts for each of the necessary app screens
 III. User functionality will include:
 	a) animated welcome screeen
 	b) instruction screen with difficulty selection buttons
