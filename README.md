@@ -4,7 +4,7 @@
 
 ## Project Description
 
-Timed trivia game in which the player attempts to answer as many questions as possible in a give amount of time.  The player will be able to choose a difficulty level and category.  Player will receive 10 points for each correct answer.  Using css animations and transitions, the UX/UI will have a cineomagraphic feel with an elegant appearance.  This will be acheived by layering full screen div elements (there will be no scrolling) and toggling their display and opacity properties. 
+A mobile first app for a timed trivia game in which the player attempts to answer as many questions as possible in a give amount of time.  The player will be able to choose a difficulty level and category.  Player will receive 10 points for each correct answer.  Using css animations and transitions, the UX/UI will have a cineomagraphic feel with an elegant appearance.  This will be acheived by layering full screen div elements (there will be no scrolling) and toggling their display and opacity properties. 
 
 ## API and Data Sample
 
@@ -56,21 +56,31 @@ Wireframes built and hosted at wireframes.cc:
 
 #### MVP 
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- Locate and test external api for stability, content quality and reliability 
+- Produce basic page layouts for each of the necessary app screens
+- User functionality will include:
+	a) animated welcome screeen
+	b) instruction screen with difficulty selection buttons
+	c) category selection screeen with six category buttons
+	d) game play screen
+		1. start button that converts to animated timer
+		2. current score board
+		3. question with 4 randomly arranged answers
+		4. new game button
+- App will be responsive to larger screen sizes but fundamentaly designed for mobile
+
 
 #### PostMVP  
 
 Wireframe post MVP:
 [HALL OF FAME SCREEN](https://wireframe.cc/56KD7P)
 
-- Add second API
-- Use local storage to save user favorites
+- Use local storage to save top five scores
+- Monitor player score and announce when they've scored in the top 5
+- Provided input field for user to submit their name to the 'Hall of Fame'
+- Advanced CSS animations and transitions to upgrade UX/UI
 
 ## Project Schedule
-
-This schedule will be used to keep track of your progress throughout the week and align with our expectations.  
 
 You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
