@@ -11,6 +11,7 @@ Timed trivia game in which the player attempts to answer as many questions as po
 Specify the API you are using and include a link. Show us a snippet of JSON returned by your API so we know you can access it and get the info you need
 
 ```
+[Open Trivia DB](https://opentdb.com/api.php?amount=10)
 https://opentdb.com/api.php?amount=10
 ```
 
