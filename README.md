@@ -1,6 +1,6 @@
 # Project Overview
 
-## Project Name
+## DYNAMIC TRIVIA
 
 The name of your project.
 
