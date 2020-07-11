@@ -10,7 +10,7 @@ Timed trivia game in which the player attempts to answer as many questions as po
 
 [Open Trivia DB](https://opentdb.com/)
 
-Sample response for mythology, hard and multiple choice:
+Sample response for mythology/hard/multiple choice:
 
 ```
 
@@ -40,38 +40,30 @@ Sample response for mythology, hard and multiple choice:
 "To fell a tree that regenerated after every axe swing."
 ]
 },
-{
-"category": "Mythology",
-"type": "multiple",
-"difficulty": "hard",
-"question": "According to Algonquian folklore, how does one transform into a Wendigo?",
-"correct_answer": "Participating in cannibalism.",
-"incorrect_answers": [
-"Excessive mutilation of animal corpses.",
-"Performing a ritual involving murder.",
-"Drinking the blood of many slain animals."
-]
-},
 
 ```
 
 ## Wireframes
 
-Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
+Wireframes built and hosted at wireframes.cc:
 
-### MVP/PostMVP
+[WELCOME SCREEN](https://wireframe.cc/1tLRqW)
 
-The functionality will then be divided into two separate lists: MPV and PostMVP.  Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.  
+[INSTRUCTIONS SCREEN](https://wireframe.cc/7jugxk)
+
+[GAME SCREEN](https://wireframe.cc/kEJqau)
+
 
 #### MVP 
-*These are examples only. Replace with your own MVP features.*
 
 - Find and use external api 
 - Render data on page 
 - Allow user to choose favorites 
 
 #### PostMVP  
-*These are examples only. Replace with your own Post-MVP features.*
+
+Wireframe post MVP:
+[HALL OF FAME SCREEN](https://wireframe.cc/56KD7P)
 
 - Add second API
 - Use local storage to save user favorites
