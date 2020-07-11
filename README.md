@@ -59,14 +59,14 @@ Wireframes built and hosted at wireframes.cc:
 - Locate and test external api for stability, content quality and reliability 
 - Produce basic page layouts for each of the necessary app screens
 - User functionality will include:
-`	a) animated welcome screeen
+-	a) animated welcome screeen
 	b) instruction screen with difficulty selection buttons
 	c) category selection screeen with six category buttons
 	d) game play screen
--		1. start button that converts to animated timer
-		2. current score board
-		3. question with 4 randomly arranged answers
-		4. new game button
+	1. start button that converts to animated timer
+	2. current score board
+	3. question with 4 randomly arranged answers
+	4. new game button
 		
 - App will be responsive to larger screen sizes but fundamentaly designed for mobile
 
