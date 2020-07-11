@@ -60,9 +60,9 @@ Wireframes built and hosted at wireframes.cc:
 - Produce basic page layouts for each of the necessary app screens
 - User functionality will include:
 -	a) animated welcome screeen
-	b) instruction screen with difficulty selection buttons
-	c) category selection screeen with six category buttons
-	d) game play screen
+-	b) instruction screen with difficulty selection buttons
+-	c) category selection screeen with six category buttons
+-	d) game play screen
 	1. start button that converts to animated timer
 	2. current score board
 	3. question with 4 randomly arranged answers
