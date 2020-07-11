@@ -62,13 +62,13 @@ III. User functionality will include:
 	a) animated welcome screeen
 	b) instruction screen with difficulty selection buttons
 	c) category selection screeen with six category buttons
-	d) game play screen
+	d) game play screen with:
 		1. start button that converts to animated timer
 		2. current score board
 		3. question with 4 randomly arranged answers
 		4. new game button
 		
-IV. App will be responsive to larger screen sizes but fundamentaly designed for mobile
+ IV. App will be responsive to larger screen sizes but fundamentaly designed for mobile
 ```
 
 #### PostMVP  
@@ -123,4 +123,5 @@ function reverse(string) {
 ```
 
 ## Change Log
- Use this section to document what changes were made and the reasoning behind those changes.  
+ 
+ 
