@@ -59,7 +59,7 @@ Wireframes built and hosted at wireframes.cc:
   I. Locate and test external api for stability, content quality and reliability 
  II. Produce basic page layouts for each of the necessary app screens
 III. User functionality will include:
-	a) animated welcome screeen
+	a) animated welcome screen
 	b) instruction screen with difficulty selection buttons
 	c) category selection screeen with six category buttons
 	d) game play screen with:
@@ -83,17 +83,16 @@ Wireframe post MVP:
 
 ## Project Schedule
 
-You are **responsible** for scheduling time with your squad to seek approval for each deliverable by the end of the corresponding day, excluding `Saturday` and `Sunday`.
 
 |  Day | Deliverable | Status
 |---|---| ---|
 |July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
 |July 13| Project Approval | Incomplete
-|July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|July 14| Pseudocode / actual code | Incomplete
-|July 15| Initial Clickable Model  | Incomplete
-|July 16| MVP | Incomplete
-|July 17| Presentations | Incomplete
+|July 13| HTML including links/scripts/meta, basics layout CSS and JS for api call and count down clock| Incomplete
+|July 14| Basic functional CSS (transitions/div display properties), JS to link screens/togle classes | Incomplete
+|July 15| JS for randomizing and placing data| Incomplete
+|July 16| Testing and more advanced CSS styling if time allows| Incomplete
+|July 17| Wake up early and begin freaking out about presenting my MVP | Incomplete
 
 ## Priority Matrix
 
@@ -101,13 +100,11 @@ Include a full list of features that have been prioritized based on the `Time an
 
 ## Timeframes
 
-Tell us how long you anticipate spending on each area of development. Be sure to consider how many hours a day you plan to be coding and how many days you have available until presentation day.
-
-Time frames are also key in the development cycle.  You have limited time to code all phases of the game.  Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Throughout your project, keep track of your Time Invested and Actual Time and update your README regularly.
+My coding schedule for the week is based on a minimum of 8 hours of acutal coding per day.  I am very excited about this project and will spend 12 hours 
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Adding Form | H | 3hrs| 3.5hrs | 3.5hrs |
+| HTML structure | H | 3hrs| 0hrs | 0hrs |
 | Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
 | First time learning markdown | H | 3hrs| 2.5hrs | 2.5hrs |
 | Total | H | 6hrs| 5hrs | 5hrs |
