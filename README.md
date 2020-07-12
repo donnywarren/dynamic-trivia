@@ -75,8 +75,6 @@ III. User functionality will include:
 
 #### PostMVP  
 
-Wireframe post MVP:
-
 [HALL OF FAME SCREEN](https://wireframe.cc/56KD7P)
 
 
@@ -108,10 +106,17 @@ My coding schedule for the week is based on a minimum of 8 hours of acutal codin
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML structure | H | 3hrs| 0hrs | 0hrs |
-| Working with API | H | 3hrs| 2.5hrs | 2.5hrs |
-| First time learning markdown | H | 3hrs| 2.5hrs | 2.5hrs |
-| Total | H | 6hrs| 5hrs | 5hrs |
+| HTML structure | M | 3hrs| 0hrs | 0hrs |
+| Basic CSS for general layout | M | 3hrs| 0hrs | 0hrs |
+| Build button templates for all screens | H | 2hrs| 0hrs | 0hrs |
+| JS to wire buttons and screens | H | 4hrs| 0hrs | 0hrs |
+| Functional CSS for screen display: none/init, opacity: 0/1 | H | 1hrs| 0hrs | 0hrs |
+| JS to check answer, evaluate right/wrong, update score | H | 4hrs| 0hrs | 0hrs |
+| Build count down clock including HTML/CSS/JS | H | 3hrs| 0hrs | 0hrs |
+| JS to end game at time and display results | H | 2hrs| 0hrs | 0hrs |
+| JS to wire new game | H | 1hrs| 0hrs | 0hrs |
+| Advanced features and styling (improve UX/UI) | L | 3hrs| 0hrs | 0hrs |
+| Total | H | 6699669966999999999999999999999999999hrs| 0hrs | 0hrs |
 
 ## Code Snippet
 
