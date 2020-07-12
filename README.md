@@ -98,7 +98,7 @@ III. User functionality will include:
 
 ## Priority Matrix
 
-PDF FILE HERE
+![PRIORITY MATRIX](/priority-matrix.pdf)
 
 ## Timeframes
 
