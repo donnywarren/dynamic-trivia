@@ -98,6 +98,8 @@ III. User functionality will include:
 
 ## Priority Matrix
 
+Because many of the tasks are dependent on each other I built my matrix with general categories.
+
 ![PRIORITY MATRIX](/priority-matrix.pdf)
 
 ## Timeframes
