@@ -109,14 +109,14 @@ My coding schedule for the week is based on a minimum of 8 hours of acutal codin
 | HTML structure | M | 3hrs| 0hrs | 0hrs |
 | Basic CSS for general layout | M | 3hrs| 0hrs | 0hrs |
 | Build button templates for all screens | H | 2hrs| 0hrs | 0hrs |
-| JS to wire buttons and screens | H | 4hrs| 0hrs | 0hrs |
-| Functional CSS for screen display: none/init, opacity: 0/1 | H | 1hrs| 0hrs | 0hrs |
+| JS to wire buttons and screens | H | 6hrs| 0hrs | 0hrs |
+| Functional CSS for screen display: none/init, opacity: 0/1 | H | 2hrs| 0hrs | 0hrs |
 | JS to check answer, evaluate right/wrong, update score | H | 4hrs| 0hrs | 0hrs |
 | Build count down clock including HTML/CSS/JS | H | 3hrs| 0hrs | 0hrs |
 | JS to end game at time and display results | H | 2hrs| 0hrs | 0hrs |
-| JS to wire new game | H | 1hrs| 0hrs | 0hrs |
+| JS to wire new game | H | 2hrs| 0hrs | 0hrs |
 | Advanced features and styling (improve UX/UI) | L | 3hrs| 0hrs | 0hrs |
-| Total | H | 6699669966999999999999999999999999999hrs| 0hrs | 0hrs |
+| Total | H | 28hrs| 0hrs | 0hrs |
 
 ## Code Snippet
 
