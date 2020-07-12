@@ -98,7 +98,7 @@ III. User functionality will include:
 
 ## Priority Matrix
 
-Include a full list of features that have been prioritized based on the `Time and Importance` Matrix.  Link this image in a similar manner to your wireframes
+PDF FILE HERE
 
 ## Timeframes
 
@@ -116,7 +116,7 @@ My coding schedule for the week is based on a minimum of 8 hours of acutal codin
 | JS to end game at time and display results | H | 2hrs| 0hrs | 0hrs |
 | JS to wire new game | H | 2hrs| 0hrs | 0hrs |
 | Advanced features and styling (improve UX/UI) | L | 3hrs| 0hrs | 0hrs |
-| Total | H | 28hrs| 0hrs | 0hrs |
+| Total | H | 30hrs| 0hrs | 0hrs |
 
 ## Code Snippet
 
