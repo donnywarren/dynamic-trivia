@@ -4,7 +4,7 @@
 
 ## Project Description
 
-Mobile first app for a timed trivia game in which the player attempts to answer as many questions as possible in a give amount of time.  The player will be able to choose a difficulty level and category.  Player will receive 10 points for each correct answer.  Using css animations and transitions, the UX/UI will have a cineomagraphic feel with an elegant appearance.  This will be acheived by layering full screen div elements (there will be no scrolling) and toggling their display and opacity properties. 
+"Mobile first" app for a timed trivia game in which the player attempts to answer as many questions as possible in a give amount of time.  The player will be able to choose a difficulty level and category.  Player will receive 10 points for each correct answer.  Using css animations and transitions, the UX/UI will have a cineomagraphic feel with an elegant appearance.  This will be acheived by layering full screen div elements (there will be no scrolling) and toggling their display and opacity properties. 
 
 ## API and Data Sample
 
@@ -51,6 +51,8 @@ Wireframes built and hosted at wireframes.cc:
 
 [INSTRUCTIONS SCREEN](https://wireframe.cc/7jugxk)
 
+[CATEGORY SCREEN](https://wireframe.cc/mnIlG9)
+
 [GAME SCREEN](https://wireframe.cc/kEJqau)
 
 
@@ -73,8 +75,9 @@ III. User functionality will include:
 
 #### PostMVP  
 
-Wireframe post MVP:
-[HALL OF FAME SCREEN](https://wireframe.cc/56KD7P)
+Wireframe post MVP:\
+
+[HALL OF FAME SCREEN](https://wireframe.cc/56KD7P)\
 
 - Use local storage to save top five scores
 - Monitor player score and announce when they've scored in the top 5
@@ -89,7 +92,7 @@ Wireframe post MVP:
 |July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
 |July 13| Project Approval | Incomplete
 |July 13| HTML including links/scripts/meta, basics layout CSS and JS for api call and count down clock| Incomplete
-|July 14| Basic functional CSS (transitions/div display properties), JS to link screens/togle classes | Incomplete
+|July 14| Basic functional CSS (transitions/div display properties), JS to link screens/toggle classes | Incomplete
 |July 15| JS for randomizing and placing data| Incomplete
 |July 16| Testing and more advanced CSS styling if time allows| Incomplete
 |July 17| Wake up early and begin freaking out about presenting my MVP | Incomplete
@@ -111,14 +114,8 @@ My coding schedule for the week is based on a minimum of 8 hours of acutal codin
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of and a brief description.  
-
-```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
-```
+TBA
 
 ## Change Log
  
- 
+ TBA
