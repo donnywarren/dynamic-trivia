@@ -75,9 +75,10 @@ III. User functionality will include:
 
 #### PostMVP  
 
-Wireframe post MVP:\
+Wireframe post MVP:
 
-[HALL OF FAME SCREEN](https://wireframe.cc/56KD7P)\
+[HALL OF FAME SCREEN](https://wireframe.cc/56KD7P)
+
 
 - Use local storage to save top five scores
 - Monitor player score and announce when they've scored in the top 5
