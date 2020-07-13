@@ -100,7 +100,7 @@ III. User functionality will include:
 
 Because many of the tasks are dependent on each other I built my matrix with general categories.
 
-![PRIORITY MATRIX](/priority-matrix.pdf)
+![PRIORITY MATRIX](/assets/priority-matrix.pdf)
 
 ## Timeframes
 
