@@ -1,0 +1,44 @@
+section {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  background-color: #000000;
+  color: #ffffff;
+  text-align: center;
+
+  /* ==== TEMPORARY ===== */
+  font-size: 48px;
+}
+
+#welcome {
+  /* display: none; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Eagle Lake', cursive;
+  z-index: 600;
+}
+
+#welcome h1 {
+  font-size: 22vw;
+  margin: 5vw 0 30vw 0;
+}
+
+#welcome h2 {
+font-size: 5vw;
+}
+
+#instructions {
+  /* display: none; */
+  z-index: 500;
+}
+
+#categories {
+  /* display: none; */
+  z-index: 400;
+}
+
+#game {
+  /* display: none; */
+  z-index: 300;
+}
