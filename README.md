@@ -88,7 +88,7 @@ III. User functionality will include:
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
+|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |July 13| Project Approval | Incomplete
 |July 13| HTML including links/scripts/meta, basics layout CSS and JS for api call and count down clock| Incomplete
 |July 14| Basic functional CSS (transitions/div display properties), JS to link screens/toggle classes | Incomplete
@@ -104,7 +104,7 @@ Because many of the tasks are dependent on each other I built my matrix with gen
 
 ## Timeframes
 
-My coding schedule for the week is based on a minimum of 8 hours of acutal coding per day.  I am very excited about this project and will spend 12 hours 
+My coding schedule for the week is based on a minimum of 8 hours of actual coding per day.  I am very excited about this project, so I will spend 12 hours per day if necessary.
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
