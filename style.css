@@ -10,13 +10,30 @@ section {
   font-size: 48px;
 }
 
+
+/* ============= WELCOME SCREEN ============== */
+
+
 #welcome {
   /* display: none; */
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: 'Eagle Lake', cursive;
-  z-index: 600;
+  z-index: 600; 
+  -webkit-animation: black-curtain 0s ease-in-out 7s forwards;
+  animation: black-curtain 0s ease-in-out 7s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
+}
+
+@keyframes black-curtain {
+  to {
+      height: 0;
+      overflow:hidden;
+      visibility: hidden;
+  }
 }
 
 #welcome h1 {
@@ -27,6 +44,71 @@ section {
 #welcome h2 {
 font-size: 5vw;
 }
+
+
+.hero, .preHero, .subHero {
+  position: relative;
+}
+
+.curtain-pretitle-box {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  margin-top: -1%;
+  width: 60%;
+  height: 175%;
+  background-color: #000000;
+  -webkit-animation: title 3s linear 0s forwards;
+  animation: title 3s linear 0s forwards;
+}
+
+.curtain-title-box {
+  position: absolute;
+  top: 2vw;
+  background-color: #000000;
+  height: 50%;
+  width: 90%;
+  -webkit-animation: title 3s linear 1.5s forwards;
+  animation: title 3s linear 1.5s forwards;
+}
+
+.curtain-subtitle-box {
+  position: absolute;
+  top: 0;
+  left: 25%;
+  margin-top: -1%;
+  width: 60%;
+  height: 175%;
+  background-color:#000000;
+  -webkit-animation: title 3s linear 4.5s forwards;
+  animation: title 3s linear 4.5s forwards;
+}
+
+@keyframes title {
+  to {
+    transform: translateX(100%);
+  }
+}
+/* 
+.black-curtain {
+  -webkit-animation: black-curtain 0s ease-in-out 6s forwards;
+  animation: black-curtain 0s ease-in-out 6s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+} */
+
+/* @keyframes black-curtain {
+  to {
+      height: 0;
+      overflow:hidden;
+      visibility: hidden;
+  }
+} */
+
+
+/* ============= INSTRUCTIONS SCREEN ============== */
+
 
 #instructions {
   /* display: none; */
