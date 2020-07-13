@@ -118,7 +118,7 @@ My coding schedule for the week is based on a minimum of 8 hours of actual codin
 | JS to end game at time and display results | H | 2hrs| 0hrs | 0hrs |
 | JS to wire new game | H | 2hrs| 0hrs | 0hrs |
 | Advanced features and styling (improve UX/UI) | L | 3hrs| 0hrs | 0hrs |
-| Total | H | 34hrs| 0hrs | 0hrs |
+| Total | H | 42hrs| 0hrs | 0hrs |
 
 ## Code Snippet
 
