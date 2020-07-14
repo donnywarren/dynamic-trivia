@@ -21,12 +21,13 @@ section {
   justify-content: center;
   font-family: 'Eagle Lake', cursive;
   z-index: 600; 
-  -webkit-animation: black-curtain 0s ease-in-out 7s forwards;
-  animation: black-curtain 0s ease-in-out 7s forwards;
+  -webkit-animation: black-curtain 0s ease-in 7s forwards;
+  animation: black-curtain 0s ease-in 7s forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
   animation-duration: 3s;
 }
+
 
 @keyframes black-curtain {
   to {
@@ -89,22 +90,6 @@ font-size: 5vw;
     transform: translateX(100%);
   }
 }
-/* 
-.black-curtain {
-  -webkit-animation: black-curtain 0s ease-in-out 6s forwards;
-  animation: black-curtain 0s ease-in-out 6s forwards;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
-  animation-duration: 2s;
-} */
-
-/* @keyframes black-curtain {
-  to {
-      height: 0;
-      overflow:hidden;
-      visibility: hidden;
-  }
-} */
 
 
 /* ============= INSTRUCTIONS SCREEN ============== */
@@ -112,15 +97,46 @@ font-size: 5vw;
 
 #instructions {
   /* display: none; */
+  /* background-color: darkmagenta; */
+  background-image: linear-gradient(to top, rgba(77,77,77,1), rgba(255,255,255,1));
   z-index: 500;
 }
 
+
+/* ============= CATEGORIES SCREEN ============== */
+
+
+
 #categories {
   /* display: none; */
+
+  background-image: linear-gradient(to top, rgba(77,77,77,1), rgba(255,255,255,1));
   z-index: 400;
 }
 
+
+/* ============= GAME SCREEN ============== */
+
+
+
 #game {
   /* display: none; */
+
+  background-image: linear-gradient(to top, rgba(77,77,77,1), rgba(255,255,255,1));
   z-index: 300;
 }
+
+
+
+/* ======= CLASS TO TOGGLE SCREEN CHANGE ========== */
+.close-curtain {
+  -webkit-animation: black-curtain 0s ease-in-out 0s forwards;
+  animation: black-curtain 0s ease-in-out 0s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  animation-duration: 3s;
+}
+
+
+
+/* =============== MEDIA QUERIES ================== */
