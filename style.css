@@ -43,20 +43,12 @@ h1 {
   animation: black-curtain 3s ease-in 8s forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  /* animation-duration: 3s; */
-}
-
-
-@keyframes black-curtain {
-  to {
-      height: 0;
-      display: none !important;
-  }
 }
 
 #welcome h1 {
   font-size: 22vw;
   margin: 5vh 0 20vh 0;
+  text-shadow: 0 0 15px #ffffff;
 }
 
 #welcome h2 {
@@ -76,8 +68,8 @@ font-size: 5vw;
   width: 60%;
   height: 175%;
   background-color: #000000;
-  -webkit-animation: title 3s linear 1s forwards;
-  animation: title 3s linear 1s forwards;
+  -webkit-animation: title 3s linear 0.5s forwards;
+  animation: title 3s linear 0.5s forwards;
 }
 
 .curtain-title-box {
@@ -86,8 +78,8 @@ font-size: 5vw;
   background-color: #000000;
   height: 50%;
   width: 90%;
-  -webkit-animation: title 3s linear 2.5s forwards;
-  animation: title 3s linear 2.5s forwards;
+  -webkit-animation: title 3s linear 2s forwards;
+  animation: title 3s linear 2s forwards;
 }
 
 .curtain-subtitle-box {
@@ -98,14 +90,21 @@ font-size: 5vw;
   width: 60%;
   height: 175%;
   background-color:#000000;
-  -webkit-animation: title 3s linear 5.5s forwards;
-  animation: title 3s linear 5.5s forwards;
+  -webkit-animation: title 3s linear 5s forwards;
+  animation: title 3s linear 5s forwards;
 }
 
 @keyframes title {
   to {
     transform: translateX(100%);
   }
+}
+
+.one {
+  -webkit-animation: black-out 2s ease-in-out 8s forwards;
+  animation: black-out 2s ease-in-out 8s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 
@@ -115,7 +114,7 @@ font-size: 5vw;
 /* ============================================== */
 
 #instructions {
-  /* display: none !important; */
+  display: none !important;
   z-index: 500;
   display: flex;
   flex-direction: column;
@@ -161,12 +160,13 @@ font-size: 5vw;
 
 
 #categories {
-  /* display: none; */
+  /* display: none !important; */
   z-index: 400;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-image: linear-gradient(to top, rgba(77,77,77,1), rgba(255,255,255,1));
+  background-color: #000000;
+  color: #ffffff;
 }
 
 #cat-header {
@@ -175,7 +175,6 @@ font-size: 5vw;
 
 .cat-selected {
   color: #f5ce00;
-  text-shadow: 0 0 5px #000000;
 }
 
 
@@ -186,6 +185,7 @@ font-size: 5vw;
   bottom: 50%;
   left: 50%;
   transform: translate(-99px);
+  color: #000000;
   z-index: 100;
 }
 
@@ -285,31 +285,49 @@ font-size: 5vw;
   width: 18vw;
   font-size: 3.5vw;
   font-weight: 700;
-  border: 2px solid #000000;
   border-radius: 50%;
   text-align: center;
   padding: 0;
-  box-shadow:  inset 0 0 10px  rgba(55, 55, 55, 0.8), 0 0 15px 5px #2e2e2e;
   outline: none;  
 }
 
-.easy:hover {
+.EASY {
+  box-shadow:  inset 0 0 24px  rgba(0, 128, 0, 0.8);
+  border: 2px solid #008000;
+}
+
+.EASY:hover {
   color: #008000;
+  box-shadow:  inset 0 0 10px  rgba(0, 128, 0, 0.8);
   font-size: 5vw !important;
   cursor: pointer;
 }
 
-.medium:hover {
+.MEDIUM {
+  box-shadow:  inset 0 0 24px  rgba(245, 206, 0, 0.8);
+  border: 2px solid #f5ce00;
+}
+
+.MEDIUM:hover {
   color: #f5ce00;
+  box-shadow:  inset 0 0 8px  rgba(245, 206, 0, 0.8);
   font-size: 5vw !important;
   cursor: pointer;
 }
 
-.hard:hover {
+.HARD {
+  box-shadow:  inset 0 0 25px  rgba(196, 0, 0, 0.9);
+  border: 2px solid #c40000;
+}
+
+.HARD:hover {
   color: #c40000;
+  box-shadow:  inset 0 0 10px  rgba(196, 0, 0, 0.9);
   font-size: 5vw !important;
   cursor: pointer;
 }
+
+#diff-header 
 
 
 
@@ -322,7 +340,10 @@ font-size: 5vw;
 #game {
   /* display: none; */
   z-index: 300;
-  background-image: linear-gradient(to top, rgba(77,77,77,1), rgba(255,255,255,1));
+}
+
+h1 {
+  color: #ffffff;
 }
 
 
@@ -342,6 +363,15 @@ font-size: 5vw;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
+
+
+@keyframes black-curtain {
+  to {
+      height: 0;
+      display: none !important;
+  }
+}
+
 
 @keyframes black-out {
   from {

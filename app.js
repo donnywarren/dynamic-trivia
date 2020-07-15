@@ -11,6 +11,8 @@ let difficulty = ''
 let categoryClicked = false
 let difficultyClicked = false
 
+
+// ====API CALL=====
 const getData = (location) => {
   if (categoryClicked && difficultyClicked) {
     switchScreen(location, categoryScrn)
@@ -37,20 +39,21 @@ categoryChoice.addEventListener('click', (e) => {
   catTitle.innerHTML = catName
   catTitle.classList.add('cat-selected')
   category = e.target.className
-  getData(location)
-  // console.log(`category is ${category}`)
-  // console.log(catName)
-  // console.log(categoryClicked)
+  getData(location, categoryScrn)
 })
 
 difficultyBtn.addEventListener('click', (e) => {
+  let diffName = e.target.className
+  let diffTitle = document.querySelector('#diff-header')
+  let location = document.querySelector(".three")
+  let color = e.target.getAttribute("color")
+  console.log(color)
+  diffTitle.innerHTML = diffName
+  diffTitle.style.color = color
+
   difficulty = e.target.className
   if (difficulty !== '') {
     difficultyClicked = true
-    getData(e)
-    // console.log(`difficulty is ${difficulty}`)
-    // console.log(difficultyClicked)
+    getData(location, categoryScrn)
   }
 })
-
-
