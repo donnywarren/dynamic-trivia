@@ -10,12 +10,31 @@ let category = ''
 let difficulty = ''
 let categoryClicked = false
 let difficultyClicked = false
+let questionPool = []
 
 
 // ====API CALL=====
-const getData = (location) => {
+
+const getData = async () => {
+  let dataSet = await axios.get(`https://opentdb.com/api.php?amount=30&category=${category}&difficulty=${difficulty}&type=multiple`)
+
+  questionPool = dataSet.data.results
+  console.log(questionPool[22].question)
+  console.log(questionPool[22].correct_answer)
+  console.log(questionPool[22].incorrect_answers[0])
+  console.log(questionPool[22].incorrect_answers[1])
+  console.log(questionPool[22].incorrect_answers[2])
+}
+
+
+
+
+
+const closeCat = (location) => {
   if (categoryClicked && difficultyClicked) {
+    getData()
     switchScreen(location, categoryScrn)
+    // console.log(category, difficulty)
   }
 }
 
@@ -39,7 +58,7 @@ categoryChoice.addEventListener('click', (e) => {
   catTitle.innerHTML = catName
   catTitle.classList.add('cat-selected')
   category = e.target.className
-  getData(location, categoryScrn)
+  closeCat(location, categoryScrn)
 })
 
 difficultyBtn.addEventListener('click', (e) => {
@@ -47,13 +66,12 @@ difficultyBtn.addEventListener('click', (e) => {
   let diffTitle = document.querySelector('#diff-header')
   let location = document.querySelector(".three")
   let color = e.target.getAttribute("color")
-  console.log(color)
   diffTitle.innerHTML = diffName
   diffTitle.style.color = color
 
-  difficulty = e.target.className
+  difficulty = e.target.className.toLowerCase()
   if (difficulty !== '') {
     difficultyClicked = true
-    getData(location, categoryScrn)
+    closeCat(location, categoryScrn)
   }
 })
