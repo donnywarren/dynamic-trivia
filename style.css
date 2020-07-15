@@ -16,8 +16,19 @@ h1 {
   margin: 12vh 0 0 0;
 }
 
+.foreground {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  background-color: #000000;
+  z-index: 200;
+}
 
-/* ============= WELCOME SCREEN ============== */
+
+
+/* ============================================== */
+/* =============== WELCOME SCREEN =============== */
+/* ============================================== */
 
 
 #welcome {
@@ -28,11 +39,11 @@ h1 {
   justify-content: center;
   font-family: 'Eagle Lake', cursive;
   color: #ffffff;
-  -webkit-animation: black-curtain 0s ease-in 7s forwards;
-  animation: black-curtain 0s ease-in 7s forwards;
+  -webkit-animation: black-curtain 3s ease-in 8s forwards;
+  animation: black-curtain 3s ease-in 8s forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  animation-duration: 3s;
+  /* animation-duration: 3s; */
 }
 
 
@@ -65,8 +76,8 @@ font-size: 5vw;
   width: 60%;
   height: 175%;
   background-color: #000000;
-  -webkit-animation: title 3s linear 0s forwards;
-  animation: title 3s linear 0s forwards;
+  -webkit-animation: title 3s linear 1s forwards;
+  animation: title 3s linear 1s forwards;
 }
 
 .curtain-title-box {
@@ -75,8 +86,8 @@ font-size: 5vw;
   background-color: #000000;
   height: 50%;
   width: 90%;
-  -webkit-animation: title 3s linear 1.5s forwards;
-  animation: title 3s linear 1.5s forwards;
+  -webkit-animation: title 3s linear 2.5s forwards;
+  animation: title 3s linear 2.5s forwards;
 }
 
 .curtain-subtitle-box {
@@ -87,8 +98,8 @@ font-size: 5vw;
   width: 60%;
   height: 175%;
   background-color:#000000;
-  -webkit-animation: title 3s linear 4.5s forwards;
-  animation: title 3s linear 4.5s forwards;
+  -webkit-animation: title 3s linear 5.5s forwards;
+  animation: title 3s linear 5.5s forwards;
 }
 
 @keyframes title {
@@ -98,17 +109,20 @@ font-size: 5vw;
 }
 
 
-/* ============= INSTRUCTIONS SCREEN ============== */
 
+/* ============================================== */
+/* ============ INSTRUCTIONS SCREEN ============= */
+/* ============================================== */
 
 #instructions {
-  display: none !important;
+  /* display: none !important; */
   z-index: 500;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(to top, rgba(77,77,77,1), rgba(255,255,255,1));
+  background-color: #000000;
+  color: white;
   font-weight: 400;
 }
 
@@ -139,8 +153,11 @@ font-size: 5vw;
 }
 
 
-/* ============= CATEGORIES SCREEN ============== */
 
+
+/* ============================================== */
+/* ============= CATEGORIES SCREEN ============== */
+/* ============================================== */
 
 
 #categories {
@@ -154,6 +171,11 @@ font-size: 5vw;
 
 #cat-header {
   margin-bottom: 40vh;
+}
+
+.cat-selected {
+  color: #f5ce00;
+  text-shadow: 0 0 5px #000000;
 }
 
 
@@ -219,7 +241,8 @@ font-size: 5vw;
 }
 
 #double-row {
-  margin: 71px 0;
+  word-wrap: normal;
+  margin: 71px 20px;
 }
 
 
@@ -291,9 +314,9 @@ font-size: 5vw;
 
 
 
-
-/* ============= GAME SCREEN ============== */
-
+/* ============================================== */
+/* ================= GAME SCREEN ================ */
+/* ============================================== */
 
 
 #game {
@@ -304,15 +327,34 @@ font-size: 5vw;
 
 
 
-/* ======= CLASS TO TOGGLE SCREEN CHANGE ========== */
+/* ======= CLASSES TO TOGGLE SCREEN CHANGE ========== */
+
 .raise-curtain {
-  -webkit-animation: black-curtain 0s ease-in-out 0s forwards;
-  animation: black-curtain 0s ease-in-out 0s forwards;
+  -webkit-animation: black-curtain 3s ease-in-out 0.5s forwards;
+  animation: black-curtain 3s ease-in-out 0.5s forwards;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-  animation-duration: 3s;
+}
+
+.black-out {
+  -webkit-animation: black-out 1s ease-in-out 0s forwards;
+  animation: black-out 1s ease-in-out 0s forwards;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes black-out {
+  from {
+    height: 100%;
+    background-color: transparent;
+  }
+  100% {
+    background-color: #000000;
+    height: 100%;
+  }
 }
 
 
-
-/* =============== MEDIA QUERIES ================== */
+/* ============================================== */
+/* =============== MEDIA QUERIES ================ */
+/* ============================================== */
