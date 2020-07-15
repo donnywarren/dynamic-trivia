@@ -1,10 +1,11 @@
-const enterBtn = document.querySelector("#enter-game")
+
 // const welcomeScrn = document.querySelector("#welcome")
 const instructionsScrn = document.querySelector("#instructions")
 const categoryScrn = document.querySelector("#categories")
 const categoryChoice = document.querySelector(".cubespinner")
 const difficultyBtn = document.querySelector("#button-box")
 const gameScrn = document.querySelector("#game")
+const enterBtn = document.querySelector("#enter-game")
 
 let category = ''
 let difficulty = ''
@@ -24,9 +25,23 @@ const getData = async () => {
   console.log(questionPool[22].incorrect_answers[0])
   console.log(questionPool[22].incorrect_answers[1])
   console.log(questionPool[22].incorrect_answers[2])
+
+  placeData()
 }
 
+const placeData = () => {
+  let guestionWindow = document.querySelector("#question")
+  let answerOne = document.querySelector("#answer-one")
+  let answerTwo = document.querySelector("#answer-two")
+  let answerThree = document.querySelector("#answer-three")
+  let answerFour = document.querySelector("#answer-four")
 
+  guestionWindow.textContent = questionPool[22].question
+  answerOne.textContent = questionPool[22].correct_answer
+  answerTwo.textContent = questionPool[22].incorrect_answers[0]
+  answerThree.textContent = questionPool[22].incorrect_answers[1]
+  answerFour.textContent = questionPool[22].incorrect_answers[2]
+}
 
 
 
