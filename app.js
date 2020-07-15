@@ -14,7 +14,7 @@ let difficultyClicked = false
 let questionPool = []
 
 
-// ====API CALL=====
+// ======= API CALL ========
 
 const getData = async () => {
   let dataSet = await axios.get(`https://opentdb.com/api.php?amount=30&category=${category}&difficulty=${difficulty}&type=multiple`)
@@ -36,11 +36,11 @@ const placeData = () => {
   let answerThree = document.querySelector("#answer-three")
   let answerFour = document.querySelector("#answer-four")
 
-  guestionWindow.textContent = questionPool[22].question
-  answerOne.textContent = questionPool[22].correct_answer
-  answerTwo.textContent = questionPool[22].incorrect_answers[0]
-  answerThree.textContent = questionPool[22].incorrect_answers[1]
-  answerFour.textContent = questionPool[22].incorrect_answers[2]
+  guestionWindow.innerHTML = questionPool[22].question
+  answerOne.innerHTML = questionPool[22].correct_answer
+  answerTwo.innerHTML = questionPool[22].incorrect_answers[0]
+  answerThree.innerHTML = questionPool[22].incorrect_answers[1]
+  answerFour.innerHTML = questionPool[22].incorrect_answers[2]
 }
 
 
@@ -49,7 +49,6 @@ const closeCat = (location) => {
   if (categoryClicked && difficultyClicked) {
     getData()
     switchScreen(location, categoryScrn)
-    // console.log(category, difficulty)
   }
 }
 
@@ -90,3 +89,25 @@ difficultyBtn.addEventListener('click', (e) => {
     closeCat(location, categoryScrn)
   }
 })
+
+
+// ========== CLOCK ==============
+
+const button = document.querySelector('#start')
+const progressBar = document.querySelector('.progress-color-bar')
+const progressBarColor = document.querySelector('.progress-color-bar')
+
+button.addEventListener('click', () => {
+  let intervalCounter = setInterval(readyGo, 1000)
+  progressBarColor.classList.add('change-color')
+})
+
+function readyGo() {
+  let countDisplay = document.querySelector('.numeric')
+  let currentCount = Number(countDisplay.textContent)
+  if (currentCount === 0) {
+    clearInterval(intervalCounter)
+  } else {
+    countDisplay.textContent = currentCount -= 1
+  }
+}

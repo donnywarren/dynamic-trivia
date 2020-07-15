@@ -11,6 +11,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400&display=swap"
     rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,700;0,800;0,900;1,700;1,800&display=swap"
+    rel="stylesheet">
   <script defer type="text/javascript" src="app.js"></script>
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <link type="text/css" rel="stylesheet" href="style.css">
@@ -86,11 +88,15 @@
 
   <section id="game">
     <div class="foreground four"></div>
+
     <div class="high corners">HIGH SCORE</div>
     <div class="new-game corners">NEW GAME</div>
 
     <div class="your-score">
-
+      <div>
+        <div class="current-score">300</div>
+        <p>CURRENT SCORE</p>
+      </div>
     </div>
 
     <button id="question" class="question-box">question</button>
@@ -103,7 +109,21 @@
     </div>
 
     <div class="timer-start">
-      <button id="start-btn" class="">start</button>
+      <div id="start-btn" class="">start</div>
+
+      <div id="clock">
+        <div class="numeric">
+          30
+        </div>
+        <div class="progress-bar">
+          <div class="progress-window">
+            <div class="progress-color-bar"></div>
+          </div>
+        </div>
+      </div>
+      <div id="start-box">
+        <div id="start">START</div>
+      </div>
     </div>
 
   </section>
