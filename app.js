@@ -43,25 +43,44 @@ const placeData = () => {
   answerFour.innerHTML = questionPool[22].incorrect_answers[2]
 }
 
+// ============== shuffle locations ==============
 
+let answerDivArray = ["answerOne", "answerTwo", "answerThree", "answerFour"]
 
-const closeCat = (location) => {
-  if (categoryClicked && difficultyClicked) {
-    getData()
-    switchScreen(location, categoryScrn)
+const shuffle = () => {
+  for (let i = answerDivArray.length - 1; i > 0; i--) {
+    const k = Math.floor(Math.random() * i)
+    const temp = answerDivArray[i]
+    answerDivArray[i] = answerDivArray[k]
+    answerDivArray[k] = temp
   }
+  console.log(answerDivArray)
 }
+
+
+
+// ===============================================
+
+
+
+
+// ====================== close screens =========================
 
 const switchScreen = (location, locationTwo) => {
   locationTwo.classList.add("raise-curtain")
   location.classList.add("black-out")
 }
 
+// ============ enter button on instructions screen ============
+
 enterBtn.addEventListener('click', (e) => {
   e.preventDefault()
   let location = document.querySelector(".two")
   switchScreen(location, instructionsScrn)
 })
+
+
+// ============= category/difficulty selection =============
 
 categoryChoice.addEventListener('click', (e) => {
   let catName = e.target.innerHTML
@@ -90,6 +109,13 @@ difficultyBtn.addEventListener('click', (e) => {
   }
 })
 
+const closeCat = (location) => {
+  if (categoryClicked && difficultyClicked) {
+    getData()
+    switchScreen(location, categoryScrn)
+  }
+}
+
 
 // ========== CLOCK ==============
 
@@ -100,16 +126,16 @@ const startBtn = document.querySelector('#start')
 let intervalCounter
 
 
-button.addEventListener('click', (e) => {
+button.addEventListener('click', () => {
   let intervalCounter = setInterval(readyGo, 1000)
   progressBarColor.classList.add('change-color')
   startBtn.style.display = "none"
-  console.log(startBtn)
 })
 
-function readyGo(e) {
+function readyGo() {
   let countDisplay = document.querySelector('.numeric')
   let currentCount = Number(countDisplay.textContent)
+
   if (currentCount === 0) {
     clearInterval(intervalCounter)
   } else {

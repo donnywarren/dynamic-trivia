@@ -32,7 +32,7 @@ h1 {
 
 
 #welcome {
-  /* display: none !important; */
+  display: none !important;
   z-index: 600; 
   display: flex;
   flex-direction: column;
@@ -114,7 +114,7 @@ font-size: 5vw;
 /* ============================================== */
 
 #instructions {
-  /* display: none !important; */
+  display: none !important;
   z-index: 500;
   display: flex;
   flex-direction: column;
@@ -162,7 +162,7 @@ font-size: 5vw;
 
 
 #categories {
-  /* display: none !important; */
+  display: none !important;
   z-index: 400;
   display: flex;
   flex-direction: column;
@@ -386,6 +386,9 @@ h1 {
 }
 
 .corners {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-size: 2vh;
   font-weight: 400;
   color: black;
@@ -395,7 +398,9 @@ h1 {
   border-radius: 4px;
   padding: 5px 10px;
   margin: 2vh;
-  height: 5vh;
+  height: 9vh;
+  width: 20vw;
+  font-weight: 900;
 }
 
 .high {
@@ -406,14 +411,24 @@ h1 {
   z-index: 301;
 }
 
+.high-score-num {
+  font-size: 6vh;
+  margin: 3px;
+}
+
 .new-game {
   -webkit-appearance: none;
   position: absolute;
   top: 0;
   right: 0;
   z-index: 301;
+  font-size: 3.5vh;
 }
 
+.new-game:hover {
+  cursor: pointer;
+  color: #797979;
+}
 
 .question-box {
   -webkit-appearance: none;
