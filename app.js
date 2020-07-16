@@ -1,5 +1,6 @@
 
-// const welcomeScrn = document.querySelector("#welcome")
+// ============  set up global variables ===================
+
 const instructionsScrn = document.querySelector("#instructions")
 const categoryScrn = document.querySelector("#categories")
 const categoryChoice = document.querySelector(".cubespinner")
@@ -12,40 +13,40 @@ let difficulty = ''
 let categoryClicked = false
 let difficultyClicked = false
 let questionPool = []
+let shuffleArray = []
 
 
-// ======= API CALL ========
+// ==================== API CALL =========================
 
 const getData = async () => {
   let dataSet = await axios.get(`https://opentdb.com/api.php?amount=30&category=${category}&difficulty=${difficulty}&type=multiple`)
 
   questionPool = dataSet.data.results
-  console.log(questionPool[22].question)
-  console.log(questionPool[22].correct_answer)
-  console.log(questionPool[22].incorrect_answers[0])
-  console.log(questionPool[22].incorrect_answers[1])
-  console.log(questionPool[22].incorrect_answers[2])
 
+  buildShuffleArray()
   placeData()
 }
+getData()
 
-const placeData = () => {
-  let guestionWindow = document.querySelector("#question")
-  let answerOne = document.querySelector("#answer-one")
-  let answerTwo = document.querySelector("#answer-two")
-  let answerThree = document.querySelector("#answer-three")
-  let answerFour = document.querySelector("#answer-four")
 
-  guestionWindow.innerHTML = questionPool[22].question
-  answerOne.innerHTML = questionPool[22].correct_answer
-  answerTwo.innerHTML = questionPool[22].incorrect_answers[0]
-  answerThree.innerHTML = questionPool[22].incorrect_answers[1]
-  answerFour.innerHTML = questionPool[22].incorrect_answers[2]
+// =========== build shuffle array ====================
+
+const buildShuffleArray = () => {
+  let i = questionPool.length - 1
+
+  let correctAnswer = [questionPool[i].correct_answer, '#008000']
+  let wrongAnswer1 = [questionPool[i].incorrect_answers[0], '#c40000']
+  let wrongAnswer2 = [questionPool[i].incorrect_answers[1], '#c40000']
+  let wrongAnswer3 = [questionPool[i].incorrect_answers[2], '#c40000']
+
+  shuffleArray.push(correctAnswer, wrongAnswer1, wrongAnswer2, wrongAnswer3)
+
 }
+setTimeout(function () { console.log(shuffleArray); }, 3000);
 
-// ============== shuffle locations ==============
 
-let answerDivArray = ["answerOne", "answerTwo", "answerThree", "answerFour"]
+
+// ============== shuffle answer array ==============
 
 const shuffle = () => {
   for (let i = answerDivArray.length - 1; i > 0; i--) {
@@ -57,11 +58,22 @@ const shuffle = () => {
   console.log(answerDivArray)
 }
 
+// =========== place data on DOM =============
 
+const placeData = () => {
+  let guestionWindow = document.querySelector("#question")
+  let answerOne = document.querySelector("#answer-one")
+  let answerTwo = document.querySelector("#answer-two")
+  let answerThree = document.querySelector("#answer-three")
+  let answerFour = document.querySelector("#answer-four")
+  let i = questionPool.length - 1
 
-// ===============================================
-
-
+  guestionWindow.innerHTML = questionPool[i].question
+  answerOne.innerHTML = shuffleArray[0][0]
+  answerTwo.innerHTML = shuffleArray[1][0]
+  answerThree.innerHTML = shuffleArray[2][0]
+  answerFour.innerHTML = shuffleArray[3][0]
+}
 
 
 // ====================== close screens =========================
@@ -71,7 +83,7 @@ const switchScreen = (location, locationTwo) => {
   location.classList.add("black-out")
 }
 
-// ============ enter button on instructions screen ============
+// ============ "enter button" on instructions screen ============
 
 enterBtn.addEventListener('click', (e) => {
   e.preventDefault()
@@ -117,7 +129,7 @@ const closeCat = (location) => {
 }
 
 
-// ========== CLOCK ==============
+// ================ CLOCK ====================
 
 const button = document.querySelector('#start')
 const progressBar = document.querySelector('.progress-color-bar')
@@ -138,6 +150,7 @@ function readyGo() {
 
   if (currentCount === 0) {
     clearInterval(intervalCounter)
+    alert("TIME IS OUT!!!!!")
   } else {
     countDisplay.textContent = currentCount -= 1
   }
