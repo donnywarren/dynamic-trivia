@@ -124,7 +124,6 @@ font-size: 5vw;
   background-color: #000000;
   color: white;
   font-weight: 400;
-  padding: 5vh 0;
 }
 
 #instructions p {
@@ -141,7 +140,7 @@ font-size: 5vw;
   background-color: #ffffff;
   border-radius: 4px;
   padding: 5px 20px;
-  margin: 10vh 0;
+  margin: 10vh 0 20vh 0;
   outline: none;
 }
 
