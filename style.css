@@ -185,7 +185,7 @@ font-size: 5vw;
 
 .selector-cube-container {
   position: absolute;
-  bottom: 50%;
+  bottom: 55%;
   left: 50%;
   transform: translate(-99px);
   color: #000000;
@@ -280,7 +280,7 @@ font-size: 5vw;
 #button-box {
   display: flex;
   justify-content: space-evenly;
-  margin: 5vh 0 9vh 0;
+  margin: 5vh 0 15vh 0;
 }
 
 #categories button {
