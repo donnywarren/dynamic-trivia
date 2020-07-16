@@ -283,6 +283,7 @@ font-size: 5vw;
 }
 
 #categories button {
+  -webkit-appearance: none;
   height: 18vw;
   width: 18vw;
   font-size: 3.5vw;
