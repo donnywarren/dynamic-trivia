@@ -33,10 +33,10 @@ getData()
 
 const buildShuffleArray = () => {
   let i = questionPool.length - 1
-  let correctAnswer = [questionPool[i].correct_answer, '#008000']
-  let wrongAnswer1 = [questionPool[i].incorrect_answers[0], '#c40000']
-  let wrongAnswer2 = [questionPool[i].incorrect_answers[1], '#c40000']
-  let wrongAnswer3 = [questionPool[i].incorrect_answers[2], '#c40000']
+  let correctAnswer = [questionPool[i].correct_answer, '0, 128, 0, 0.8']
+  let wrongAnswer1 = [questionPool[i].incorrect_answers[0], '196, 00, 00, 0.9']
+  let wrongAnswer2 = [questionPool[i].incorrect_answers[1], '196, 00, 00, 0.9']
+  let wrongAnswer3 = [questionPool[i].incorrect_answers[2], '196, 00, 00, 0.9']
 
   shuffleArray.push(correctAnswer, wrongAnswer1, wrongAnswer2, wrongAnswer3)
   questionPool.pop()
@@ -96,8 +96,8 @@ const answerBox = document.querySelector("#answer-box")
 
 const playGame = () => {
 
-
   answerBox.addEventListener('click', (e) => {
+    showCorrect(e)
     let playerChoice = e.target
 
 
@@ -106,6 +106,23 @@ const playGame = () => {
   })
 }
 playGame()
+
+// ================== change answer box colors ============
+
+const showCorrect = (e) => {
+
+
+  const answerOne = document.querySelector('#answer-one')
+  const answerTwo = document.querySelector('#answer-two')
+  const answerThree = document.querySelector('#answer-three')
+  const answerFour = document.querySelector('#answer-four')
+  console.log(answerOne)
+  answerOne.style.boxShadow = `inset 0 0 20px rgba(${answerOne.name})`
+  answerTwo.style.boxShadow = `inset 0 0 20px rgba(${answerTwo.name})`
+  answerThree.style.boxShadow = `inset 0 0 20px rgba(${answerThree.name})`
+  answerFour.style.boxShadow = `inset 0 0 20px rgba(${answerFour.name})`
+  console.log(e.path[1])
+}
 
 
 
