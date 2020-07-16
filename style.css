@@ -131,6 +131,7 @@ font-size: 5vw;
 }
 
 #enter-game {
+  -webkit-appearance: none;
   font-size: 7vw;
   font-weight: 900;
   border: 1px solid #000000;
