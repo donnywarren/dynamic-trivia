@@ -400,9 +400,9 @@ h1 {
   box-shadow: inset 0 0 10px rgba(55, 55, 55, 0.8);
   border-radius: 4px;
   padding: 5px 10px;
-  margin: 5vh 2vh;
+  /* margin: 6vh 3vh; */
   height: 9vh;
-  width: 20vw;
+  width: 22vw;
   font-weight: 900;
 
 }
@@ -410,21 +410,21 @@ h1 {
 .high {
   -webkit-appearance: none;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 6vh;
+  left: 5vh;
   z-index: 301;
 }
 
 .high-score-num {
-  font-size: 6vh;
-  margin: 3px;
+  font-size: 5vh;
+  margin: 0 0 4px 0;
 }
 
 .new-game {
   -webkit-appearance: none;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 6vh;
+  right: 5vh;
   z-index: 301;
   font-size: 3.5vh;
 }

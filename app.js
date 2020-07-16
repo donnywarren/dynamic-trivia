@@ -24,7 +24,7 @@ const getData = async () => {
   questionPool = dataSet.data.results
 
   buildShuffleArray()
-  placeData()
+  // placeData()
 }
 getData()
 
@@ -33,30 +33,30 @@ getData()
 
 const buildShuffleArray = () => {
   let i = questionPool.length - 1
-
   let correctAnswer = [questionPool[i].correct_answer, '#008000']
   let wrongAnswer1 = [questionPool[i].incorrect_answers[0], '#c40000']
   let wrongAnswer2 = [questionPool[i].incorrect_answers[1], '#c40000']
   let wrongAnswer3 = [questionPool[i].incorrect_answers[2], '#c40000']
 
   shuffleArray.push(correctAnswer, wrongAnswer1, wrongAnswer2, wrongAnswer3)
-
+  questionPool.pop()
+  shuffle()
 }
-setTimeout(function () { console.log(shuffleArray); }, 3000);
-
 
 
 // ============== shuffle answer array ==============
 
 const shuffle = () => {
-  for (let i = answerDivArray.length - 1; i > 0; i--) {
+  for (let i = shuffleArray.length - 1; i > 0; i--) {
     const k = Math.floor(Math.random() * i)
-    const temp = answerDivArray[i]
-    answerDivArray[i] = answerDivArray[k]
-    answerDivArray[k] = temp
+    const temp = shuffleArray[i]
+    shuffleArray[i] = shuffleArray[k]
+    shuffleArray[k] = temp
   }
-  console.log(answerDivArray)
+  // console.log(shuffleArray)
+  placeData()
 }
+setTimeout(function () { shuffle(); }, 1000);
 
 // =========== place data on DOM =============
 
@@ -73,7 +73,40 @@ const placeData = () => {
   answerTwo.innerHTML = shuffleArray[1][0]
   answerThree.innerHTML = shuffleArray[2][0]
   answerFour.innerHTML = shuffleArray[3][0]
+
+  answerOne.name = shuffleArray[0][1]
+  answerTwo.name = shuffleArray[1][1]
+  answerThree.name = shuffleArray[2][1]
+  answerFour.name = shuffleArray[3][1]
+
+  // console.log(answerOne.name)
 }
+
+
+
+
+// ==================== game play ===========================
+
+const foregroundScrn = document.querySelector(".foreground-screen")
+const answerBox = document.querySelector("#answer-box")
+
+// console.log(foregroundScrn)
+// console.log(answerBox)
+
+
+const playGame = () => {
+
+
+  answerBox.addEventListener('click', (e) => {
+    let playerChoice = e.target
+
+
+    // buildShuffleArray()
+    console.log(playerChoice.name)
+  })
+}
+playGame()
+
 
 
 // ====================== close screens =========================
@@ -142,6 +175,7 @@ button.addEventListener('click', () => {
   let intervalCounter = setInterval(readyGo, 1000)
   progressBarColor.classList.add('change-color')
   startBtn.style.display = "none"
+  // playGame()
 })
 
 function readyGo() {
@@ -150,7 +184,6 @@ function readyGo() {
 
   if (currentCount === 0) {
     clearInterval(intervalCounter)
-    alert("TIME IS OUT!!!!!")
   } else {
     countDisplay.textContent = currentCount -= 1
   }
