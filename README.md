@@ -126,4 +126,4 @@ TBA
 
 ## Change Log
  
- TBA
+ Added more animations
