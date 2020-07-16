@@ -96,13 +96,18 @@ difficultyBtn.addEventListener('click', (e) => {
 const button = document.querySelector('#start')
 const progressBar = document.querySelector('.progress-color-bar')
 const progressBarColor = document.querySelector('.progress-color-bar')
+const startBtn = document.querySelector('#start')
+let intervalCounter
 
-button.addEventListener('click', () => {
+
+button.addEventListener('click', (e) => {
   let intervalCounter = setInterval(readyGo, 1000)
   progressBarColor.classList.add('change-color')
+  startBtn.style.display = "none"
+  console.log(startBtn)
 })
 
-function readyGo() {
+function readyGo(e) {
   let countDisplay = document.querySelector('.numeric')
   let currentCount = Number(countDisplay.textContent)
   if (currentCount === 0) {
