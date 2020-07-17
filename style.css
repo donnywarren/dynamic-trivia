@@ -613,7 +613,7 @@ footer {
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  bottom: 10px;
+  top: 98%;
   left: 0;
   font-size: 10px;
   color: #ffffff;
