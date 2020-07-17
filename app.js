@@ -18,20 +18,27 @@ let shuffleArray = []
 
 // ==================== API CALL =========================
 
-const getData = async () => {
-  let dataSet = await axios.get(`https://opentdb.com/api.php?amount=30&category=${category}&difficulty=${difficulty}&type=multiple`)
+async function getData() {
 
-  questionPool = dataSet.data.results
+  try {
+    const dataSet = await axios.get(`https://opentdb.com/api.php?amount=30&category=${category}&difficulty=${difficulty}&type=multiple`)
+    questionPool = dataSet.data.results
 
-  buildShuffleArray()
-  // placeData()
+    let buildNow =
+      buildShuffleArray()
+
+    console.log(questionPool)
+  } catch (error) {
+    console.log(`This is my async error:  ${errer}`)
+  }
 }
-// getData()
+
 
 
 // =========== build shuffle array ====================
 
 let question
+
 const buildShuffleArray = () => {
   let i = questionPool.length - 1
   let correctAnswer = [questionPool[i].correct_answer, '0, 128, 0, 0.8']
@@ -41,8 +48,11 @@ const buildShuffleArray = () => {
 
   shuffleArray.push(correctAnswer, wrongAnswer1, wrongAnswer2, wrongAnswer3)
   question = questionPool[i].question
+
+  console.log(shuffleArray)
   shuffle()
   questionPool.pop()
+  console.log(questionPool)
 }
 
 
@@ -55,10 +65,7 @@ const shuffle = () => {
     shuffleArray[i] = shuffleArray[k]
     shuffleArray[k] = temp
   }
-  console.log(shuffleArray)
-  placeData()
 }
-setTimeout(function () { shuffle(); }, 1000);
 
 
 
@@ -85,6 +92,7 @@ const placeData = () => {
 
 
 // =============== set point value ========================
+
 let pointValue = 0
 
 const setPointValue = (difficulty) => {
@@ -104,21 +112,26 @@ const answerBox = document.querySelector("#answer-box")
 let currentScore = document.querySelector('.current-score')
 let currentScoreNum = Number(currentScore.innerHTML)
 
+function nextRound() {
+  resetShadowBox()
+  placeData()
+}
+
 function checkAnswer(e) {
   showCorrect(e)
+  setTimeout(nextRound, 750)
+  buildShuffleArray()
+
   let playerChoice = e.target.name
-  console.log(playerChoice)
+
   if (playerChoice === '0, 128, 0, 0.8') {
-    console.log(currentScoreNum)
     currentScore.innerHTML = currentScoreNum += pointValue
-    console.log(currentScoreNum)
-    console.log(pointValue)
   }
 }
 const playGame = () => {
   answerBox.addEventListener('click', checkAnswer)
 }
-playGame()
+
 
 // ================== change answer box colors ============
 
@@ -221,7 +234,9 @@ button.addEventListener('click', () => {
   let intervalCounter = setInterval(readyGo, 1000)
   progressBarColor.classList.add('change-color')
   startBtn.style.display = "none"
-  // playGame()
+  placeData()
+  buildShuffleArray()
+  playGame()
 })
 
 function readyGo() {
@@ -236,3 +251,46 @@ function readyGo() {
     countDisplay.textContent = currentCount -= 1
   }
 }
+
+
+// ================ NEW GAME ====================
+
+const newGame = document.querySelector(".new-game")
+
+const resetShadowBox = () => {
+  const answerBoxes = document.querySelectorAll(".answer-box")
+
+  answerBoxes[0].style.boxShadow = "inset 0 0 10px rgba(55, 55, 55, 0.8)"
+  answerBoxes[1].style.boxShadow = "inset 0 0 10px rgba(55, 55, 55, 0.8)"
+  answerBoxes[2].style.boxShadow = "inset 0 0 10px rgba(55, 55, 55, 0.8)"
+  answerBoxes[3].style.boxShadow = "inset 0 0 10px rgba(55, 55, 55, 0.8)"
+}
+
+// const resetClock = () => {
+//   let countDisplay = document.querySelector('.numeric')
+
+//   progressBarColor.classList.remove('change-color')
+//   startBtn.style.display = "inline-block"
+//   countDisplay.textContent = 30
+// }
+
+newGame.addEventListener('click', () => {
+  location.reload()
+  // const categoryColor = document.querySelector("#cat-header")
+  // const difficultyColor = document.querySelector("#diff-header")
+
+  // categoryColor.style.color = "inherit"
+  // categoryColor.innerHTML = "CATEGORY"
+  // difficultyColor.style.color = "inherit"
+  // difficultyColor.innerHTML = "DIFFICULTY"
+  // resetShadowBox()
+  // categoryClicked = false
+  // difficultyClicked = false
+  // currentScore.innerHTML = 0
+  // categoryScrn.classList.remove("raise-curtain")
+  // document.querySelector(".three").classList.remove("black-out")
+  // resetClock()
+})
+
+
+
