@@ -24,12 +24,10 @@ async function getData() {
     const dataSet = await axios.get(`https://opentdb.com/api.php?amount=30&category=${category}&difficulty=${difficulty}&type=multiple`)
     questionPool = dataSet.data.results
 
-    let buildNow =
-      buildShuffleArray()
+    buildShuffleArray()
 
-    console.log(questionPool)
   } catch (error) {
-    console.log(`This is my async error:  ${errer}`)
+    alert(`This is my async error:  ${errer}`)
   }
 }
 
@@ -46,13 +44,12 @@ const buildShuffleArray = () => {
   let wrongAnswer2 = [questionPool[i].incorrect_answers[1], '196, 00, 00, 0.9']
   let wrongAnswer3 = [questionPool[i].incorrect_answers[2], '196, 00, 00, 0.9']
 
+  shuffleArray = []
   shuffleArray.push(correctAnswer, wrongAnswer1, wrongAnswer2, wrongAnswer3)
   question = questionPool[i].question
 
-  console.log(shuffleArray)
   shuffle()
   questionPool.pop()
-  console.log(questionPool)
 }
 
 
@@ -133,6 +130,20 @@ const playGame = () => {
 }
 
 
+
+// =============== clear answer box shadow color ===============
+
+const resetShadowBox = () => {
+  const answerBoxes = document.querySelectorAll(".answer-box")
+
+  answerBoxes[0].style.boxShadow = "inset 0 0 10px rgba(55, 55, 55, 0.8)"
+  answerBoxes[1].style.boxShadow = "inset 0 0 10px rgba(55, 55, 55, 0.8)"
+  answerBoxes[2].style.boxShadow = "inset 0 0 10px rgba(55, 55, 55, 0.8)"
+  answerBoxes[3].style.boxShadow = "inset 0 0 10px rgba(55, 55, 55, 0.8)"
+}
+
+
+
 // ================== change answer box colors ============
 
 const showCorrect = (e) => {
@@ -205,6 +216,7 @@ const closeCat = (location) => {
   if (categoryClicked && difficultyClicked) {
     getData()
     switchScreen(location, categoryScrn)
+    document.querySelector(".high-score-num").innerHTML = sessionStorage.getItem("score")
   }
 }
 
@@ -218,6 +230,7 @@ const checkHighScore = () => {
   if (currentHigh < currentScoreNum) {
     highScore.innerHTML = currentScoreNum
   }
+  sessionStorage.setItem("score", currentHigh)
 }
 
 
@@ -257,39 +270,8 @@ function readyGo() {
 
 const newGame = document.querySelector(".new-game")
 
-const resetShadowBox = () => {
-  const answerBoxes = document.querySelectorAll(".answer-box")
-
-  answerBoxes[0].style.boxShadow = "inset 0 0 10px rgba(55, 55, 55, 0.8)"
-  answerBoxes[1].style.boxShadow = "inset 0 0 10px rgba(55, 55, 55, 0.8)"
-  answerBoxes[2].style.boxShadow = "inset 0 0 10px rgba(55, 55, 55, 0.8)"
-  answerBoxes[3].style.boxShadow = "inset 0 0 10px rgba(55, 55, 55, 0.8)"
-}
-
-// const resetClock = () => {
-//   let countDisplay = document.querySelector('.numeric')
-
-//   progressBarColor.classList.remove('change-color')
-//   startBtn.style.display = "inline-block"
-//   countDisplay.textContent = 30
-// }
-
 newGame.addEventListener('click', () => {
   location.reload()
-  // const categoryColor = document.querySelector("#cat-header")
-  // const difficultyColor = document.querySelector("#diff-header")
-
-  // categoryColor.style.color = "inherit"
-  // categoryColor.innerHTML = "CATEGORY"
-  // difficultyColor.style.color = "inherit"
-  // difficultyColor.innerHTML = "DIFFICULTY"
-  // resetShadowBox()
-  // categoryClicked = false
-  // difficultyClicked = false
-  // currentScore.innerHTML = 0
-  // categoryScrn.classList.remove("raise-curtain")
-  // document.querySelector(".three").classList.remove("black-out")
-  // resetClock()
 })
 
 
