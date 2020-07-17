@@ -6,6 +6,8 @@
 
 "Mobile first" app for a timed trivia game in which the player attempts to answer as many questions as possible in a give amount of time.  The player will be able to choose a difficulty level and category.  Player will receive 10 points for each correct answer.  Using css animations and transitions, the UX/UI will have a cineomagraphic feel with an elegant appearance.  This will be acheived by layering full screen div elements (there will be no scrolling) and toggling their display and opacity properties. 
 
+[DYNAMIC TRIVIA](https://pages.git.generalassemb.ly/donnywarren9/dynamic-trivia/)
+
 ## API and Data Sample
 
 [Open Trivia DB](https://opentdb.com/)
