@@ -90,11 +90,11 @@ III. User functionality will include:
 |---|---| ---|
 |July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Complete
 |July 13| Project Approval | Complete
-|July 13| HTML including links/scripts/meta, basics layout CSS and JS for api call and count down clock| Incomplete
-|July 14| Basic functional CSS (transitions/div display properties), JS to link screens/toggle classes | Incomplete
-|July 15| JS for randomizing and placing data| Incomplete
-|July 16| Testing and more advanced CSS styling if time allows| Incomplete
-|July 17| Wake up early and begin freaking out about presenting my MVP | Incomplete
+|July 13| HTML including links/scripts/meta, basics layout CSS and JS for api call and count down clock| Complete
+|July 14| Basic functional CSS (transitions/div display properties), JS to link screens/toggle classes | Complete
+|July 15| JS for randomizing and placing data| Complete
+|July 16| Testing and more advanced CSS styling if time allows| Complete
+|July 17| Wake up early and begin freaking out about presenting my MVP | Complete
 
 ## Priority Matrix
 
