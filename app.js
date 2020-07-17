@@ -93,36 +93,43 @@ const answerBox = document.querySelector("#answer-box")
 // console.log(foregroundScrn)
 // console.log(answerBox)
 
-
+function checkAnswer(e) {
+  showCorrect(e)
+  let playerChoice = e.target
+  // buildShuffleArray()
+  console.log(playerChoice.name)
+}
 const playGame = () => {
 
-  answerBox.addEventListener('click', (e) => {
-    showCorrect(e)
-    let playerChoice = e.target
-
-
-    // buildShuffleArray()
-    console.log(playerChoice.name)
-  })
+  answerBox.addEventListener('click', checkAnswer)
 }
 playGame()
 
 // ================== change answer box colors ============
 
 const showCorrect = (e) => {
-
-
   const answerOne = document.querySelector('#answer-one')
   const answerTwo = document.querySelector('#answer-two')
   const answerThree = document.querySelector('#answer-three')
   const answerFour = document.querySelector('#answer-four')
-  console.log(answerOne)
-  answerOne.style.boxShadow = `inset 0 0 20px rgba(${answerOne.name})`
-  answerTwo.style.boxShadow = `inset 0 0 20px rgba(${answerTwo.name})`
-  answerThree.style.boxShadow = `inset 0 0 20px rgba(${answerThree.name})`
-  answerFour.style.boxShadow = `inset 0 0 20px rgba(${answerFour.name})`
-  console.log(e.path[1])
+
+  answerOne.style.boxShadow = `inset 0 0 30px rgba(${answerOne.name})`
+  answerTwo.style.boxShadow = `inset 0 0 30px rgba(${answerTwo.name})`
+  answerThree.style.boxShadow = `inset 0 0 30px rgba(${answerThree.name})`
+  answerFour.style.boxShadow = `inset 0 0 30px rgba(${answerFour.name})`
+
 }
+
+
+// ============== end of game click blocker ================
+
+const blockClick = () => {
+
+  answerBox.removeEventListener('click', checkAnswer)
+
+}
+
+
 
 
 
@@ -200,7 +207,8 @@ function readyGo() {
   let currentCount = Number(countDisplay.textContent)
 
   if (currentCount === 0) {
-    clearInterval(intervalCounter)
+    // blockClick()
+    let stop = clearInterval(intervalCounter)
   } else {
     countDisplay.textContent = currentCount -= 1
   }
