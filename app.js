@@ -26,11 +26,11 @@ const getData = async () => {
   buildShuffleArray()
   // placeData()
 }
-getData()
+// getData()
 
 
 // =========== build shuffle array ====================
-
+let question
 const buildShuffleArray = () => {
   let i = questionPool.length - 1
   let correctAnswer = [questionPool[i].correct_answer, '0, 128, 0, 0.8']
@@ -39,8 +39,9 @@ const buildShuffleArray = () => {
   let wrongAnswer3 = [questionPool[i].incorrect_answers[2], '196, 00, 00, 0.9']
 
   shuffleArray.push(correctAnswer, wrongAnswer1, wrongAnswer2, wrongAnswer3)
-  questionPool.pop()
+  question = questionPool[i].question
   shuffle()
+  questionPool.pop()
 }
 
 
@@ -53,7 +54,7 @@ const shuffle = () => {
     shuffleArray[i] = shuffleArray[k]
     shuffleArray[k] = temp
   }
-  // console.log(shuffleArray)
+  console.log(shuffleArray)
   placeData()
 }
 setTimeout(function () { shuffle(); }, 1000);
@@ -66,9 +67,11 @@ const placeData = () => {
   let answerTwo = document.querySelector("#answer-two")
   let answerThree = document.querySelector("#answer-three")
   let answerFour = document.querySelector("#answer-four")
-  let i = questionPool.length - 1
+  // let i = questionPool.length - 1
 
-  guestionWindow.innerHTML = questionPool[i].question
+  // console.log(shuffleArray)
+
+  guestionWindow.innerHTML = question
   answerOne.innerHTML = shuffleArray[0][0]
   answerTwo.innerHTML = shuffleArray[1][0]
   answerThree.innerHTML = shuffleArray[2][0]
@@ -78,6 +81,8 @@ const placeData = () => {
   answerTwo.name = shuffleArray[1][1]
   answerThree.name = shuffleArray[2][1]
   answerFour.name = shuffleArray[3][1]
+
+  // console.log(shuffleArray)
 
   // console.log(answerOne.name)
 }
@@ -113,6 +118,7 @@ function checkAnswer(e) {
     console.log(currentScoreNum)
     console.log(pointValue)
   }
+  checkHighScore()  // temporary
 }
 const playGame = () => {
   answerBox.addEventListener('click', checkAnswer)
@@ -196,6 +202,18 @@ const closeCat = (location) => {
 }
 
 
+// =============== check for high score ========
+
+const checkHighScore = () => {
+  let highScore = document.querySelector('.high-score-num')
+  let currentHigh = Number(highScore.innerHTML)
+
+  if (currentHigh < currentScoreNum) {
+    highScore.innerHTML = currentScoreNum
+  }
+}
+checkHighScore()
+
 // ================ CLOCK ====================
 
 const button = document.querySelector('#start')
@@ -218,6 +236,7 @@ function readyGo() {
 
   if (currentCount === 0) {
     blockClick()
+    checkHighScore()
     let stop = clearInterval(intervalCounter)
   } else {
     countDisplay.textContent = currentCount -= 1
