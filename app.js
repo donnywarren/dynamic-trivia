@@ -83,24 +83,38 @@ const placeData = () => {
 }
 
 
+// =============== set point value ========================
+let pointValue = 0
+
+const setPointValue = (difficulty) => {
+  if (difficulty === "easy") {
+    pointValue = 100
+  } else if (difficulty === "medium") {
+    pointValue = 125
+  } else {
+    pointValue = 150
+  }
+}
 
 
 // ==================== game play ===========================
 
-const foregroundScrn = document.querySelector(".foreground-screen")
 const answerBox = document.querySelector("#answer-box")
-
-// console.log(foregroundScrn)
-// console.log(answerBox)
+let currentScore = document.querySelector('.current-score')
+let currentScoreNum = Number(currentScore.innerHTML)
 
 function checkAnswer(e) {
   showCorrect(e)
-  let playerChoice = e.target
-  // buildShuffleArray()
-  console.log(playerChoice.name)
+  let playerChoice = e.target.name
+  console.log(playerChoice)
+  if (playerChoice === '0, 128, 0, 0.8') {
+    console.log(currentScoreNum)
+    currentScore.innerHTML = currentScoreNum += pointValue
+    console.log(currentScoreNum)
+    console.log(pointValue)
+  }
 }
 const playGame = () => {
-
   answerBox.addEventListener('click', checkAnswer)
 }
 playGame()
@@ -124,13 +138,8 @@ const showCorrect = (e) => {
 // ============== end of game click blocker ================
 
 const blockClick = () => {
-
   answerBox.removeEventListener('click', checkAnswer)
-
 }
-
-
-
 
 
 // ====================== close screens =========================
@@ -174,6 +183,7 @@ difficultyBtn.addEventListener('click', (e) => {
   difficulty = e.target.className.toLowerCase()
   if (difficulty !== '') {
     difficultyClicked = true
+    setPointValue(difficulty)
     closeCat(location, categoryScrn)
   }
 })
@@ -207,7 +217,7 @@ function readyGo() {
   let currentCount = Number(countDisplay.textContent)
 
   if (currentCount === 0) {
-    // blockClick()
+    blockClick()
     let stop = clearInterval(intervalCounter)
   } else {
     countDisplay.textContent = currentCount -= 1
