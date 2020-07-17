@@ -630,8 +630,172 @@ footer a {
 /* =============== MEDIA QUERIES ================ */
 /* ============================================== */
 
+
+
+
+
+@media only screen and (min-width: 800px) {
+  #instructions p {
+    width: 73vh;
+    line-height: .95em;
+    font-size: .75em;
+  }
+
+  #enter-game {
+    font-size: 7vh;;
+  }
+
+
+}
+
+
+
+
 @media only screen and (min-width: 1024px) {
   section {
-     
+     font-size: 4vh;
     }
+
+  h1 {
+    font-size: 9vh;
+  }
+
+  #welcome h1 {
+    font-size: 22vh;
+  }
+
+  #welcome h2 {
+    font-size: 5vh;
+  }
+
+  .curtain-title-box {
+    top: 3vh;
+  }
+
+  #instructions p {
+    width: 73vh;
+    line-height: .95em;
+  }
+
+  #enter-game {
+    font-size: 7vh;;
+  }
+
+  #enter-game:active {
+    font-size: 7.1vh;
+  }
+  #categories button {
+    height: 18vh;
+    width: 18vh;
+    font-size: 3.5vh;
+  }
+
+  .EASY:hover {
+    font-size: 5vh !important;
+  }
+
+  .MEDIUM:hover {
+    font-size: 5vh !important;
+  }
+
+  .HARD:hover {
+    font-size: 5vh !important;
+  }
+
+  .corners {
+    width: 20vh;
+  }
+
+  .question-box {
+    font-size: 3.25vh;
+    width: 80vh;
+    margin: 20px 10vh;
+  }
+
+  .answer-box {
+    font-size: 3vh;
+    width: 70vh;
+    margin: 15px 10vh;
+  }
+
+  #clock {
+    height: 20vh;
+  }
+
+  .numeric {
+    margin-top: -.3vh;
+    font-size: 20vh;
+  }
+
+  .progress-window {
+    height: 3vh;
+  }
+
+  .progress-color-bar {
+    box-shadow: 0 0 6vh 4vh #00a200;
+  }
+  #start {
+    font-size: 18vh;
+  }
+
+  @keyframes greenToRed {
+    50% {box-shadow: 0 0 2.7vh 1.8vh #00a200;}
+    65% {box-shadow: 0 0 1.5vh 1vh #ffff00;}
+    95% {box-shadow: 0 0 0.3vh 0.2vh #ff0000;}
+    100% {box-shadow: 0 0 0 0 #ff0000;}
+  }
+
+  .selector-cube-container {
+    position: absolute;
+    bottom: 55%;
+    left: 50%;
+    transform: translate(-75px);
+    color: #000000;
+    z-index: 100;
+  }
+
+  .cubespinner {
+    -webkit-animation-name: spincube;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-duration: 12s;
+    transform-style: preserve-3d;
+    transform-origin: 75px 75px 0;
+  }
+
+  #panel-6 p {
+    margin: 59px 0;
+  }
+
+  .cubespinner div {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    font-size: 24px;
+  }
+
+  #panel-1 {
+    transform: translateZ(75px);
+  }
+  #panel-2 {
+    transform: rotateY(90deg) translateZ(75px);
+  }
+  #panel-3 {
+    transform: rotateY(90deg) rotateX(90deg) translateZ(75px);
+  }
+  #panel-4 {
+    transform: rotateY(180deg) rotateZ(90deg) translateZ(75px);
+  }
+  #panel-5 {
+    transform: rotateY(-90deg) rotateZ(90deg) translateZ(75px);
+  }
+  #panel-6 {
+    transform: rotateX(-90deg) translateZ(75px);
+  }
+
+  .cubespinner div p {
+    margin: 61px 0;
+  }
+
+
 }
