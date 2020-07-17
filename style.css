@@ -589,7 +589,7 @@ h1 {
 
 .change-color {
   animation-name: greenToRed;
-  animation-duration: 30500ms;
+  animation-duration: 60500ms;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
