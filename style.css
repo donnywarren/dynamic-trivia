@@ -431,7 +431,7 @@ h1 {
 
 .new-game:hover {
   cursor: pointer;
-  color: #797979;
+  color: #636363;
 }
 
 .question-box {
@@ -443,7 +443,7 @@ h1 {
   box-shadow: inset 0 0 10px rgba(55, 55, 55, 0.8);
   border-radius: 4px;
   padding: 5px 20px;
-  height: 13vh;
+  height: 12vh;
   width: 80vw;
   margin: 20px 10vw;
   outline: none;
@@ -604,6 +604,27 @@ h1 {
 }
 
 
+
+/* ============================================== */
+/* =================== FOOTER =================== */
+/* ============================================== */
+
+
+footer {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  bottom: 10px;
+  left: 0;
+  font-size: 10px;
+  color: #ffffff;
+  z-index: 900;
+}
+
+footer a {
+  color: #ffffff;
+}
 
 
 

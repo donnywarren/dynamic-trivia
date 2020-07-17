@@ -30,6 +30,7 @@ const getData = async () => {
 
 
 // =========== build shuffle array ====================
+
 let question
 const buildShuffleArray = () => {
   let i = questionPool.length - 1
@@ -59,6 +60,8 @@ const shuffle = () => {
 }
 setTimeout(function () { shuffle(); }, 1000);
 
+
+
 // =========== place data on DOM =============
 
 const placeData = () => {
@@ -67,9 +70,6 @@ const placeData = () => {
   let answerTwo = document.querySelector("#answer-two")
   let answerThree = document.querySelector("#answer-three")
   let answerFour = document.querySelector("#answer-four")
-  // let i = questionPool.length - 1
-
-  // console.log(shuffleArray)
 
   guestionWindow.innerHTML = question
   answerOne.innerHTML = shuffleArray[0][0]
@@ -81,10 +81,6 @@ const placeData = () => {
   answerTwo.name = shuffleArray[1][1]
   answerThree.name = shuffleArray[2][1]
   answerFour.name = shuffleArray[3][1]
-
-  // console.log(shuffleArray)
-
-  // console.log(answerOne.name)
 }
 
 
@@ -118,7 +114,6 @@ function checkAnswer(e) {
     console.log(currentScoreNum)
     console.log(pointValue)
   }
-  checkHighScore()  // temporary
 }
 const playGame = () => {
   answerBox.addEventListener('click', checkAnswer)
@@ -137,7 +132,6 @@ const showCorrect = (e) => {
   answerTwo.style.boxShadow = `inset 0 0 30px rgba(${answerTwo.name})`
   answerThree.style.boxShadow = `inset 0 0 30px rgba(${answerThree.name})`
   answerFour.style.boxShadow = `inset 0 0 30px rgba(${answerFour.name})`
-
 }
 
 
@@ -212,7 +206,7 @@ const checkHighScore = () => {
     highScore.innerHTML = currentScoreNum
   }
 }
-checkHighScore()
+
 
 // ================ CLOCK ====================
 
