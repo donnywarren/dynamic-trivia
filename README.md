@@ -108,22 +108,51 @@ My coding schedule for the week is based on a minimum of 8 hours of actual codin
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML structure | M | 6hrs| 3hrs | 0hrs |
-| Basic CSS for general layout | M | 3hrs| 3hrs | 0hrs |
-| Build button templates for all screens | H | 3hrs| 3hrs | 0hrs |
-| API to wired buttons and screens | H | 6hrs| 0hrs | 0hrs |
-| Functional CSS for screen display: none/init, opacity: 0/1 | H | 4hrs| 5hrs | 0hrs |
-| JS to check answer, evaluate right/wrong, update score | H | 4hrs| 0hrs | 0hrs |
-| Build count down clock including HTML/CSS/JS | H | 6hrs| 3hrs | 0hrs |
-| JS to end game at time and display results | H | 2hrs| 0hrs | 0hrs |
-| JS to wire new game | H | 2hrs| 0hrs | 0hrs |
-| Advanced features and styling (improve UX/UI) | L | 3hrs| 2hrs | 0hrs |
-| Total | H | 42hrs| 19hrs | 0hrs |
+| HTML structure | M | 6hrs| 6hrs | 6hrs |
+| Basic CSS for general layout | M | 3hrs| 4hrs | 4hrs |
+| Build button templates for all screens | H | 3hrs| 3hrs | 3hrs |
+| API to wired buttons and screens | H | 6hrs| 7hrs | 7hrs |
+| Functional CSS for screen display: none/init, opacity: 0/1 | H | 4hrs| 5hrs | 5hrs |
+| JS to check answer, evaluate right/wrong, update score | H | 4hrs| 3hrs | 3hrs |
+| Build count down clock including HTML/CSS/JS | H | 6hrs| 8hrs | 8hrs |
+| JS to end game at time and display results | H | 2hrs| 1hrs | 1hrs |
+| JS to wire new game | H | 2hrs| 3hrs | 3hrs |
+| Advanced features and styling (improve UX/UI) | L | 3hrs| 4hrs | 4hrs |
+| Total | H | 42hrs| 44hrs | 44hrs |
+
 
 ## Code Snippet
 
-TBA
+
+
+// ==================== game play ===========================
+
+const answerBox = document.querySelector("#answer-box")
+let currentScore = document.querySelector('.current-score')
+let currentScoreNum = Number(currentScore.innerHTML)
+
+function nextRound() {
+  resetShadowBox()
+  placeData()
+}
+
+function checkAnswer(e) {
+  showCorrect(e)
+  setTimeout(nextRound, 750)
+  buildShuffleArray()
+
+  let playerChoice = e.target.name
+
+  if (playerChoice === '0, 128, 0, 0.8') {
+    currentScore.innerHTML = currentScoreNum += pointValue
+  }
+}
+const playGame = () => {
+  answerBox.addEventListener('click', checkAnswer)
+}
+
+
 
 ## Change Log
  
- Added more animations
+ Added more animations 
