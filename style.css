@@ -1,4 +1,3 @@
-
 section {
   position: absolute;
   height: 100vh;
@@ -6,9 +5,9 @@ section {
   background-color: #000000;
   color: #000000;
   text-align: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 4vw;
-  overflow:hidden;
+  overflow: hidden;
 }
 
 h1 {
@@ -25,20 +24,17 @@ h1 {
   z-index: 200;
 }
 
-
-
 /* ============================================== */
 /* =============== WELCOME SCREEN =============== */
 /* ============================================== */
 
-
 #welcome {
   /* display: none !important; */
-  z-index: 600; 
+  z-index: 600;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-family: 'Eagle Lake', cursive;
+  font-family: "Eagle Lake", cursive;
   color: #ffffff;
   -webkit-animation: black-curtain 3s ease-in 8s forwards;
   animation: black-curtain 3s ease-in 8s forwards;
@@ -53,11 +49,12 @@ h1 {
 }
 
 #welcome h2 {
-font-size: 5vw;
+  font-size: 5vw;
 }
 
-
-.hero, .preHero, .subHero {
+.hero,
+.preHero,
+.subHero {
   position: relative;
 }
 
@@ -90,7 +87,7 @@ font-size: 5vw;
   margin-top: -1%;
   width: 60%;
   height: 175%;
-  background-color:#000000;
+  background-color: #000000;
   -webkit-animation: title 3s linear 5s forwards;
   animation: title 3s linear 5s forwards;
 }
@@ -107,8 +104,6 @@ font-size: 5vw;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-
-
 
 /* ============================================== */
 /* ============ INSTRUCTIONS SCREEN ============= */
@@ -157,13 +152,9 @@ font-size: 5vw;
   font-size: 7.1vw;
 }
 
-
-
-
 /* ============================================== */
 /* ============= CATEGORIES SCREEN ============== */
 /* ============================================== */
-
 
 #categories {
   /* display: none !important; */
@@ -183,8 +174,7 @@ font-size: 5vw;
   color: #f5ce00;
 }
 
-
-/* == CUBE == */
+/* ======================== SELECTOR CUBE =========================== */
 
 .selector-cube-container {
   position: absolute;
@@ -195,9 +185,9 @@ font-size: 5vw;
   z-index: 100;
 }
 
-
 @keyframes spincube {
-  from,to {
+  from,
+  to {
     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
   16% {
@@ -235,8 +225,8 @@ font-size: 5vw;
   width: 198px;
   height: 198px;
   border: 1px solid #ccc;
-  background: rgba(255,255,255,0.8);
-  box-shadow: inset 0 0 40px rgba(55,55,55,0.4);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: inset 0 0 40px rgba(55, 55, 55, 0.4);
   text-align: center;
   font-size: 28px;
   font-weight: 900;
@@ -250,7 +240,6 @@ font-size: 5vw;
   word-wrap: normal;
   margin: 71px 20px;
 }
-
 
 #panel-1 {
   transform: translateZ(99px);
@@ -271,14 +260,19 @@ font-size: 5vw;
   transform: rotateX(-90deg) translateZ(99px);
 }
 
-#panel-1:hover, #panel-2:hover, #panel-3:hover, #panel-4:hover, #panel-5:hover, #panel-6:hover {
+#panel-1:hover,
+#panel-2:hover,
+#panel-3:hover,
+#panel-4:hover,
+#panel-5:hover,
+#panel-6:hover {
   color: #f5ce00;
   cursor: pointer;
   font-size: 32px;
   text-shadow: 0 0 5px #000000;
 }
 
-/* == DIFICULTY BUTTONS == */
+/* =========================== DIFICULTY BUTTONS =========================== */
 
 #button-box {
   display: flex;
@@ -295,19 +289,19 @@ font-size: 5vw;
   border-radius: 50%;
   text-align: center;
   padding: 0;
-  outline: none;  
+  outline: none;
 }
 
 .EASY {
   -webkit-appearance: none;
   background-color: #ffffff;
-  box-shadow:  inset 0 0 24px  rgba(0, 128, 0, 0.8);
+  box-shadow: inset 0 0 24px rgba(0, 128, 0, 0.8);
   border: 2px solid #008000;
 }
 
 .EASY:hover {
   color: #008000;
-  box-shadow:  inset 0 0 10px  rgba(0, 128, 0, 0.8);
+  box-shadow: inset 0 0 10px rgba(0, 128, 0, 0.8);
   font-size: 5vw !important;
   cursor: pointer;
 }
@@ -315,13 +309,13 @@ font-size: 5vw;
 .MEDIUM {
   -webkit-appearance: none;
   background-color: #ffffff;
-  box-shadow:  inset 0 0 24px  rgba(245, 206, 0, 0.8);
+  box-shadow: inset 0 0 24px rgba(245, 206, 0, 0.8);
   border: 2px solid #f5ce00;
 }
 
 .MEDIUM:hover {
   color: #f5ce00;
-  box-shadow:  inset 0 0 8px  rgba(245, 206, 0, 0.8);
+  box-shadow: inset 0 0 8px rgba(245, 206, 0, 0.8);
   font-size: 5vw !important;
   cursor: pointer;
 }
@@ -329,19 +323,16 @@ font-size: 5vw;
 .HARD {
   -webkit-appearance: none;
   background-color: #ffffff;
-  box-shadow:  inset 0 0 25px  rgba(196, 0, 0, 0.9);
+  box-shadow: inset 0 0 25px rgba(196, 0, 0, 0.9);
   border: 2px solid #c40000;
 }
 
 .HARD:hover {
   color: #c40000;
-  box-shadow:  inset 0 0 10px  rgba(196, 0, 0, 0.9);
+  box-shadow: inset 0 0 10px rgba(196, 0, 0, 0.9);
   font-size: 5vw !important;
   cursor: pointer;
 }
-
-
-
 
 /* ============================================== */
 /* ================= GAME SCREEN ================ */
@@ -357,7 +348,6 @@ font-size: 5vw;
   background-color: #000000;
   font-weight: 400;
 }
-  
 
 #game button {
   display: inline-block;
@@ -448,7 +438,6 @@ h1 {
   outline: none;
 }
 
-
 .answer-box {
   -webkit-appearance: none;
   background-color: #ffffff;
@@ -473,8 +462,7 @@ h1 {
   width: 100%;
 }
 
-
-/* ======= CLASSES TO TOGGLE SCREEN CHANGE ========== */
+/* ======= CLASS NAMES TO TOGGLE SCREEN CHANGE ========== */
 
 .raise-curtain {
   -webkit-animation: black-curtain 3s ease-in-out 0.5s forwards;
@@ -490,14 +478,12 @@ h1 {
   animation-fill-mode: forwards;
 }
 
-
 @keyframes black-curtain {
   to {
-      height: 0;
-      display: none !important;
+    height: 0;
+    display: none !important;
   }
 }
-
 
 @keyframes black-out {
   from {
@@ -513,7 +499,6 @@ h1 {
 /* ============================================== */
 /* =============== COUNTDOWN CLOCK ============== */
 /* ============================================== */
-
 
 #clock {
   position: relative;
@@ -532,13 +517,13 @@ h1 {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-top: -.3vw;
+  margin-top: -0.3vw;
   top: 50%;
   transform: translateY(-50%);
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 700;
   font-size: 20vw;
-  line-height: .73em;
+  line-height: 0.73em;
   z-index: 100;
 }
 
@@ -573,7 +558,7 @@ h1 {
   height: 100%;
   width: 100%;
   padding-top: 1vh;
-  font-family: 'Work Sans', sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-weight: 900;
   font-size: 18vw;
   color: #c40000;
@@ -585,7 +570,7 @@ h1 {
   cursor: pointer;
 }
 
-/* ============ ANIMATIONS ============= */
+/* ========================= CLOCK ANIMATIONS ===================== */
 
 .change-color {
   animation-name: greenToRed;
@@ -595,18 +580,23 @@ h1 {
 }
 
 @keyframes greenToRed {
-  50% {box-shadow: 0 0 2.7vw 1.8vw #00a200;}
-  65% {box-shadow: 0 0 1.5vw 1vw #ffff00;}
-  95% {box-shadow: 0 0 0.3vw 0.2vw #ff0000;}
-  100% {box-shadow: 0 0 0 0 #ff0000;}
+  50% {
+    box-shadow: 0 0 2.7vw 1.8vw #00a200;
+  }
+  65% {
+    box-shadow: 0 0 1.5vw 1vw #ffff00;
+  }
+  95% {
+    box-shadow: 0 0 0.3vw 0.2vw #ff0000;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #ff0000;
+  }
 }
-
-
 
 /* ============================================== */
 /* =================== FOOTER =================== */
 /* ============================================== */
-
 
 footer {
   position: absolute;
@@ -625,37 +615,32 @@ footer a {
   color: #ffffff;
 }
 
-
-
 /* ============================================== */
 /* =============== MEDIA QUERIES ================ */
 /* ============================================== */
 
-
-
-
+@media only screen and (min-width: 750px) {
+  #cat-header {
+    margin-bottom: 30vh;
+  }
+}
 
 @media only screen and (min-width: 800px) {
   #instructions p {
     width: 73vh;
-    line-height: .95em;
-    font-size: .75em;
+    line-height: 0.95em;
+    font-size: 0.75em;
   }
 
   #enter-game {
-    font-size: 7vh;;
+    font-size: 7vh;
   }
-
-
 }
 
-
-
-
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1034px) {
   section {
-     font-size: 4vh;
-    }
+    font-size: 4vh;
+  }
 
   h1 {
     font-size: 9vh;
@@ -675,19 +660,24 @@ footer a {
 
   #instructions p {
     width: 73vh;
-    line-height: .95em;
+    line-height: 0.95em;
   }
 
   #enter-game {
-    font-size: 7vh;;
+    font-size: 7vh;
   }
 
   #enter-game:active {
     font-size: 7.1vh;
   }
+
+  #cat-header {
+    margin-bottom: 20vh;
+  }
+
   #categories button {
-    height: 12vh;
-    width: 12vh;
+    height: 17vh;
+    width: 17vh;
     font-size: 3.5vh;
   }
 
@@ -724,7 +714,7 @@ footer a {
   }
 
   .numeric {
-    margin-top: -.3vh;
+    margin-top: -0.3vh;
     font-size: 20vh;
   }
 
@@ -740,10 +730,18 @@ footer a {
   }
 
   @keyframes greenToRed {
-    50% {box-shadow: 0 0 2.7vh 1.8vh #00a200;}
-    65% {box-shadow: 0 0 1.5vh 1vh #ffff00;}
-    95% {box-shadow: 0 0 0.3vh 0.2vh #ff0000;}
-    100% {box-shadow: 0 0 0 0 #ff0000;}
+    50% {
+      box-shadow: 0 0 2.7vh 1.8vh #00a200;
+    }
+    65% {
+      box-shadow: 0 0 1.5vh 1vh #ffff00;
+    }
+    95% {
+      box-shadow: 0 0 0.3vh 0.2vh #ff0000;
+    }
+    100% {
+      box-shadow: 0 0 0 0 #ff0000;
+    }
   }
 
   .selector-cube-container {
@@ -797,6 +795,4 @@ footer a {
   .cubespinner div p {
     margin: 61px 0;
   }
-
-
 }
