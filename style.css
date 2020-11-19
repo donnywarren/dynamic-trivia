@@ -744,7 +744,7 @@ footer a {
     }
   }
 
-  .selector-cube-container {
+  /* .selector-cube-container {
     position: absolute;
     bottom: 55%;
     left: 50%;
@@ -794,5 +794,5 @@ footer a {
 
   .cubespinner div p {
     margin: 61px 0;
-  }
+  } */
 }
