@@ -96,7 +96,7 @@ const setPointValue = (difficulty) => {
 
 // ==================== game play ===========================
 
-const answerBox = document.querySelector("#answer-box");
+const answerBox = document.querySelector("#answer-container");
 let currentScore = document.querySelector(".current-score");
 let currentScoreNum = Number(currentScore.innerHTML);
 

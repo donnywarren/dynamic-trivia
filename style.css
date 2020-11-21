@@ -438,6 +438,14 @@ h1 {
   outline: none;
 }
 
+#question {
+  margin-bottom: 30px;
+}
+
+#answer-container {
+  margin-bottom: 30px;
+}
+
 .answer-box {
   -webkit-appearance: none;
   background-color: #ffffff;
@@ -637,7 +645,7 @@ footer a {
   }
 }
 
-@media only screen and (min-width: 1034px) {
+@media only screen and (min-width: 1025px) {
   section {
     font-size: 4vh;
   }
@@ -672,25 +680,33 @@ footer a {
   }
 
   #cat-header {
-    margin-bottom: 20vh;
+    margin-bottom: 32vh;
+  }
+
+  .selector-cube-container {
+    bottom: 53%;
+  }
+
+  #button-box {
+    margin: 5vh 0 8vh 0;
   }
 
   #categories button {
-    height: 17vh;
-    width: 17vh;
-    font-size: 3.5vh;
+    height: 10vw;
+    width: 10vw;
+    font-size: 3vw;
   }
 
   .EASY:hover {
-    font-size: 5vh !important;
+    font-size: 4vh !important;
   }
 
   .MEDIUM:hover {
-    font-size: 5vh !important;
+    font-size: 4vh !important;
   }
 
   .HARD:hover {
-    font-size: 5vh !important;
+    font-size: 4vh !important;
   }
 
   .corners {
@@ -744,55 +760,7 @@ footer a {
     }
   }
 
-  /* .selector-cube-container {
-    position: absolute;
-    bottom: 55%;
-    left: 50%;
-    transform: translate(-75px);
-    color: #000000;
-    z-index: 100;
+  .timer-start {
+    bottom: 30px;
   }
-
-  .cubespinner {
-    -webkit-animation-name: spincube;
-    -webkit-animation-timing-function: ease-in-out;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-duration: 12s;
-    transform-style: preserve-3d;
-    transform-origin: 75px 75px 0;
-  }
-
-  #panel-6 p {
-    margin: 59px 0;
-  }
-
-  .cubespinner div {
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    font-size: 24px;
-  }
-
-  #panel-1 {
-    transform: translateZ(75px);
-  }
-  #panel-2 {
-    transform: rotateY(90deg) translateZ(75px);
-  }
-  #panel-3 {
-    transform: rotateY(90deg) rotateX(90deg) translateZ(75px);
-  }
-  #panel-4 {
-    transform: rotateY(180deg) rotateZ(90deg) translateZ(75px);
-  }
-  #panel-5 {
-    transform: rotateY(-90deg) rotateZ(90deg) translateZ(75px);
-  }
-  #panel-6 {
-    transform: rotateX(-90deg) translateZ(75px);
-  }
-
-  .cubespinner div p {
-    margin: 61px 0;
-  } */
 }
