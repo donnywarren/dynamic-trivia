@@ -550,7 +550,7 @@ h1 {
 .progress-color-bar {
   height: 1px;
   width: 80%;
-  box-shadow: 0 0 5vw 4vw #00a200;
+  box-shadow: 0 0 5vw 3vw #00a200;
   background-color: rgba(0, 162, 0, 0.82);
   float: right;
   margin-right: 8%;
