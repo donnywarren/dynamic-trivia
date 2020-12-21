@@ -548,7 +548,7 @@ h1 {
 }
 
 .progress-color-bar {
-  height: 0px;
+  height: 1px;
   width: 84%;
   box-shadow: 0 0 6vw 4vw #00a200;
   float: right;
