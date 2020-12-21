@@ -29,7 +29,7 @@ h1 {
 /* ============================================== */
 
 #welcome {
-  /* display: none !important; */
+  display: none !important;
   z-index: 600;
   display: flex;
   flex-direction: column;
@@ -110,7 +110,7 @@ h1 {
 /* ============================================== */
 
 #instructions {
-  /* display: none !important; */
+  display: none !important;
   z-index: 500;
   display: flex;
   flex-direction: column;
@@ -549,9 +549,9 @@ h1 {
 
 .progress-color-bar {
   height: 1px;
-  width: 84%;
-  box-shadow: 0 0 6vw 4vw #00a200;
-  background-color: #00a200;
+  width: 80%;
+  box-shadow: 0 0 5vw 4vw #00a200;
+  background-color: rgba(0, 162, 0, 0.82);
   float: right;
   margin-right: 8%;
 }
@@ -591,19 +591,20 @@ h1 {
 @keyframes greenToRed {
   50% {
     box-shadow: 0 0 2.7vw 1.8vw #00a200;
-    background-color: #00a200;
+    background-color: rgba(0, 162, 0, 0.82);
   }
   65% {
     box-shadow: 0 0 1.5vw 1vw #ffff00;
-    background-color: #ffff00;
+    background-color: rgba(255, 255, 0, 0.82);
   }
   95% {
     box-shadow: 0 0 0.3vw 0.2vw #ff0000;
-    background-color: #ff0000;
+    background-color: rgba(255, 0, 0, 0.82);
   }
   100% {
     box-shadow: 0 0 0 0 #ff0000;
     background-color: #ff0000;
+    height: 0;
   }
 }
 
@@ -746,6 +747,7 @@ footer a {
   .progress-color-bar {
     box-shadow: 0 0 6vh 4vh #00a200;
   }
+
   #start {
     font-size: 18vh;
   }
@@ -753,15 +755,20 @@ footer a {
   @keyframes greenToRed {
     50% {
       box-shadow: 0 0 2.7vh 1.8vh #00a200;
+      background-color: rgba(0, 162, 0, 0.82);
     }
     65% {
       box-shadow: 0 0 1.5vh 1vh #ffff00;
+      background-color: rgba(255, 255, 0, 0.82);
     }
     95% {
       box-shadow: 0 0 0.3vh 0.2vh #ff0000;
+      background-color: rgba(255, 0, 0, 0.82);
     }
     100% {
       box-shadow: 0 0 0 0 #ff0000;
+      background-color: #ff0000;
+      height: 0;
     }
   }
 
