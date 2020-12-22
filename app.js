@@ -51,10 +51,11 @@ const buildShuffleArray = () => {
 // ============== shuffle answer array ==============
 
 const shuffle = () => {
-  for (let i = shuffleArray.length - 1; i > 0; i--) {
+  for (let i = shuffleArray.length; i > 0; i -= 1) {
+    console.log(i);
     const k = Math.floor(Math.random() * i);
-    const temp = shuffleArray[i];
-    shuffleArray[i] = shuffleArray[k];
+    const temp = shuffleArray[i - 1];
+    shuffleArray[i - 1] = shuffleArray[k];
     shuffleArray[k] = temp;
   }
 };
